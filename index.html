@@ -1836,65 +1836,77 @@
     background: rgba(201, 169, 97, 0.25);
     color: #e8c977;
 }
-/* ===== ПОЛНАЯ МОБИЛЬНАЯ ВЕРСИЯ ===== */
+/* ===== ПОЛНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ С ПРОКРУТКОЙ ===== */
 
-/* Планшеты */
-@media (max-width: 1024px) {
-    .docs-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-template-rows: repeat(3, 130px) !important;
-    }
-    
-    .docs-side {
-        position: static !important;
-        width: 100% !important;
-        margin-top: 20px !important;
-    }
-    
-    .docs-main {
-        padding-right: 0 !important;
-    }
-}
-
-/* Телефоны - основная адаптация */
+/* Разрешаем прокрутку на мобильных */
 @media (max-width: 768px) {
-    /* Разрешаем прокрутку */
+    /* Разрешаем прокрутку страницы */
+    html, body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        height: auto !important;
+        position: relative !important;
+    }
+    
+    /* Страницы могут прокручиваться */
     .page {
         height: auto !important;
         min-height: 100vh !important;
         overflow: visible !important;
+        position: relative !important;
     }
     
-    .content {
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 15px 20px 30px !important;
-        overflow: visible !important;
+    .page.active {
+        display: block !important;
     }
     
-    /* Фон остается */
+    /* Фиксированный фон */
     .bg-image {
         position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: center center !important;
         z-index: 1 !important;
     }
     
     .overlay {
         position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
         background: rgba(0,0,0,0.85) !important;
         z-index: 2 !important;
     }
     
+    /* Контент с прокруткой */
+    .content {
+        position: relative !important;
+        z-index: 3 !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 60px 15px 30px !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+    
+    /* Кнопка НАЗАД фиксированная */
+    .back-button {
+        position: fixed !important;
+        top: 10px !important;
+        right: 10px !important;
+        z-index: 100 !important;
+        padding: 8px 14px !important;
+        font-size: 10px !important;
+    }
+    
     /* Заголовки */
     .docs-title {
-        font-size: 26px !important;
+        font-size: 24px !important;
         margin-bottom: 15px !important;
-        line-height: 1.2 !important;
+        line-height: 1.3 !important;
     }
     
     .docs-subtitle {
@@ -1904,37 +1916,46 @@
     }
     
     .support-title {
-        font-size: 30px !important;
+        font-size: 28px !important;
     }
     
     .concept-title-big {
-        font-size: 36px !important;
+        font-size: 34px !important;
     }
     
     .title-main {
-        font-size: 45px !important;
+        font-size: 42px !important;
     }
     
     .motto {
-        font-size: 24px !important;
+        font-size: 22px !important;
         white-space: normal !important;
         line-height: 1.2 !important;
     }
     
-    /* Карточки документов - 1 колонка */
+    /* Карточки документов - все видны */
+    .docs-main {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
     .docs-grid {
+        display: grid !important;
         grid-template-columns: 1fr !important;
         grid-template-rows: repeat(6, auto) !important;
         gap: 12px !important;
-        margin: 20px 0 !important;
+        width: 100% !important;
     }
     
     .doc-card {
-        min-height: 110px !important;
+        min-height: 100px !important;
         max-height: none !important;
         height: auto !important;
         aspect-ratio: auto !important;
         padding: 15px 12px !important;
+        width: 100% !important;
     }
     
     .doc-icon {
@@ -1946,34 +1967,77 @@
     .doc-title {
         font-size: 11px !important;
         line-height: 1.3 !important;
+        margin-bottom: 8px !important;
     }
     
     .doc-desc {
         display: block !important;
         font-size: 9px !important;
-        margin: 5px 0 !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8px !important;
     }
     
-    /* Боковая панель */
-    .docs-main {
-        flex-direction: column !important;
-        gap: 20px !important;
+    .doc-meta {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 8px !important;
     }
     
+    .doc-size {
+        font-size: 10px !important;
+    }
+    
+    /* Боковая панель - все элементы видны */
     .docs-side {
         width: 100% !important;
         position: static !important;
-        margin-top: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
     
     .side-part {
         padding: 18px !important;
+        width: 100% !important;
+    }
+    
+    .side-part-title {
+        font-size: 12px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .side-part-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .side-part-item {
+        font-size: 11px !important;
+        gap: 10px !important;
+    }
+    
+    .side-part-icon {
+        width: 22px !important;
+        height: 22px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .side-btn, .contact-btn {
+        width: 100% !important;
+        padding: 14px !important;
+        font-size: 11px !important;
+        margin-bottom: 10px !important;
+        display: block !important;
     }
     
     /* Страница 1 */
     .hero-top {
+        display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+        width: 100% !important;
     }
     
     .left-panel {
@@ -1992,22 +2056,32 @@
     
     .supporter-item {
         gap: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px 20px !important;
+        font-size: 12px !important;
     }
     
     /* Страница 2 */
     .concept-header {
+        display: flex !important;
         flex-direction: column !important;
-        padding-right: 0 !important;
         gap: 15px !important;
+        padding-right: 0 !important;
     }
     
     .quote-box {
         position: static !important;
         width: 100% !important;
-        margin-top: 10px !important;
+        padding: 15px !important;
     }
     
     .concept-main {
+        display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
     }
@@ -2017,29 +2091,50 @@
         width: 100% !important;
     }
     
+    .concept-elements {
+        gap: 12px !important;
+    }
+    
+    .concept-element {
+        gap: 10px !important;
+    }
+    
     .values-block {
+        display: flex !important;
         flex-direction: column !important;
         gap: 10px !important;
         margin-top: 20px !important;
+        width: 100% !important;
     }
     
     .value-card {
         width: 100% !important;
         min-width: 100% !important;
+        padding: 12px !important;
     }
     
     .concept-footer {
+        display: flex !important;
         flex-direction: column !important;
         gap: 15px !important;
+        margin-top: 20px !important;
     }
     
     .bottom-info {
+        display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
     }
     
+    .btn-large {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px 20px !important;
+    }
+    
     /* Страница 3 */
     .support-header {
+        display: flex !important;
         flex-direction: column !important;
         gap: 25px !important;
     }
@@ -2049,16 +2144,15 @@
         width: 100% !important;
     }
     
-    .support-right {
-        position: static !important;
-        width: 100% !important;
-        margin-top: 20px !important;
-        gap: 15px !important;
+    .support-text {
+        max-width: 100% !important;
     }
     
     .support-ways {
+        display: flex !important;
         flex-wrap: wrap !important;
         gap: 10px !important;
+        width: 100% !important;
     }
     
     .way-card {
@@ -2071,15 +2165,26 @@
     .way-icon {
         width: 36px !important;
         height: 36px !important;
+        margin-bottom: 10px !important;
     }
     
     .way-title {
         font-size: 10px !important;
+        line-height: 1.2 !important;
     }
     
     .way-desc {
         font-size: 9px !important;
+        line-height: 1.3 !important;
         display: block !important;
+    }
+    
+    .support-right {
+        position: static !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
     
     .qr-section, .motto-section {
@@ -2088,41 +2193,40 @@
     }
     
     .qr-content {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
+        gap: 10px !important;
     }
     
     .qr-code {
         width: 120px !important;
         height: 120px !important;
-        margin-bottom: 10px !important;
     }
     
-    /* Кнопки */
-    .btn, .btn-large, .docs-button, .side-btn, .contact-btn {
+    .docs-button {
         width: 100% !important;
         justify-content: center !important;
         padding: 14px 20px !important;
-        font-size: 12px !important;
-        margin-bottom: 10px !important;
     }
     
-    /* Кнопка НАЗАД */
-    .back-button {
-        position: fixed !important;
-        top: 10px !important;
-        right: 10px !important;
-        z-index: 100 !important;
-        padding: 8px 14px !important;
-        font-size: 10px !important;
-    }
-    
-    /* Модальные окна */
+    /* Модальные окна с прокруткой */
     .modal {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1000 !important;
         padding: 20px 10px !important;
         align-items: flex-start !important;
         overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .modal.active {
+        display: flex !important;
     }
     
     .modal-content {
@@ -2131,6 +2235,7 @@
         margin: 60px 0 20px 0 !important;
         padding: 25px 15px !important;
         max-height: none !important;
+        position: relative !important;
     }
     
     .modal-title {
@@ -2140,10 +2245,12 @@
     }
     
     .modal-close {
+        position: absolute !important;
         top: 15px !important;
         right: 15px !important;
         width: 32px !important;
         height: 32px !important;
+        z-index: 10 !important;
     }
     
     .modal-section {
@@ -2159,24 +2266,12 @@
     .letters-list {
         max-height: 400px !important;
         overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
     }
     
     .letter-item {
         padding: 15px !important;
         gap: 12px !important;
-    }
-    
-    .letter-icon {
-        width: 40px !important;
-        height: 40px !important;
-    }
-    
-    .letter-name {
-        font-size: 13px !important;
-    }
-    
-    .letter-size {
-        font-size: 11px !important;
     }
     
     /* QR код */
@@ -2191,12 +2286,24 @@
         align-items: center !important;
         text-align: center !important;
     }
+    
+    /* Футер */
+    .footer-bar {
+        max-width: 100% !important;
+        margin-top: 20px !important;
+    }
+    
+    .footer-note {
+        max-width: 100% !important;
+        font-size: 9px !important;
+        margin-top: 15px !important;
+    }
 }
 
 /* Маленькие телефоны */
 @media (max-width: 480px) {
     .content {
-        padding: 12px 15px 25px !important;
+        padding: 60px 12px 25px !important;
     }
     
     .docs-title {
@@ -2204,7 +2311,7 @@
     }
     
     .title-main {
-        font-size: 38px !important;
+        font-size: 36px !important;
     }
     
     .motto {
@@ -2212,17 +2319,13 @@
     }
     
     .doc-card {
-        min-height: 100px !important;
+        min-height: 95px !important;
         padding: 12px 10px !important;
     }
     
     .doc-icon {
         width: 32px !important;
         height: 32px !important;
-    }
-    
-    .doc-title {
-        font-size: 10px !important;
     }
     
     .way-card {
@@ -2234,20 +2337,8 @@
         font-size: 26px !important;
     }
     
-    .support-subtitle {
-        font-size: 18px !important;
-    }
-    
     .concept-title-big {
         font-size: 30px !important;
-    }
-    
-    .concept-title-gold {
-        font-size: 16px !important;
-    }
-    
-    .side-part {
-        padding: 15px !important;
     }
 }
 
@@ -2262,17 +2353,12 @@
     }
     
     .doc-card {
-        min-height: 95px !important;
-        padding: 10px 8px !important;
+        min-height: 90px !important;
     }
     
     .doc-icon {
         width: 28px !important;
         height: 28px !important;
-    }
-    
-    .doc-title {
-        font-size: 9px !important;
     }
 }
 
@@ -2290,15 +2376,13 @@
     }
     
     .doc-card:active, 
-    .way-card:active,
-    .side-btn:active,
-    .contact-btn:active {
+    .way-card:active {
         transform: scale(0.97) !important;
         opacity: 0.9 !important;
     }
 }
 
-/* Общие улучшения для мобильных */
+/* Общие улучшения */
 * {
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
@@ -2306,7 +2390,6 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
     overflow-x: hidden;
 }
 
@@ -2314,10 +2397,9 @@ body {
     overflow-x: hidden;
     max-width: 100vw;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Фиксированный фон для всех страниц */
+/* Фиксированный фон */
 .bg-image, .overlay {
     position: fixed !important;
     width: 100% !important;
@@ -2336,7 +2418,7 @@ img {
     overflow-x: hidden !important;
 }
 
-/* Делаем текст читаемым */
+/* Текст переносится */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -2345,19 +2427,6 @@ img {
     p, div, span, h1, h2, h3, h4, h5, h6 {
         word-wrap: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
-    }
-}
-
-/* Плавная прокрутка для модальных окон */
-.modal {
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Улучшения для карточек на мобильных */
-@media (max-width: 768px) {
-    .doc-card, .way-card, .value-card {
-        -webkit-tap-highlight-color: rgba(201, 169, 97, 0.1);
     }
 }
     </style>
