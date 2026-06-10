@@ -2525,6 +2525,170 @@ img {
         overflow-wrap: break-word;
     }
 }
+        /* ===== ИСПРАВЛЕНИЕ ФОНА ДЛЯ ВСЕХ СТРАНИЦ ===== */
+@media (max-width: 768px) {
+    /* Фон для всех страниц */
+    #page1 .bg-image,
+    #page2 .bg-image,
+    #page3 .bg-image,
+    #page4 .bg-image {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        z-index: 1 !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    #page1 .overlay,
+    #page2 .overlay,
+    #page3 .overlay,
+    #page4 .overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0,0,0,0.85) !important;
+        z-index: 2 !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* ===== СТРАНИЦА 4 - ИСПРАВЛЕНИЕ ===== */
+    /* Карточки документов */
+    #page4 .docs-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(6, auto) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+    
+    #page4 .doc-card {
+        min-height: 95px !important;
+        max-height: none !important;
+        height: auto !important;
+        aspect-ratio: auto !important;
+        padding: 12px 10px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    
+    /* Боковая панель - под карточками */
+    #page4 .docs-side {
+        width: 100% !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+        margin-bottom: 30px !important;
+        z-index: 10 !important;
+    }
+    
+    #page4 .side-part {
+        padding: 15px !important;
+        width: 100% !important;
+        background: rgba(15, 25, 50, 0.95) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 6px !important;
+    }
+    
+    #page4 .side-part-title {
+        font-size: 12px !important;
+        margin-bottom: 15px !important;
+        color: #c9a961 !important;
+    }
+    
+    #page4 .side-part-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    #page4 .side-part-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        font-size: 11px !important;
+        color: #ddd !important;
+    }
+    
+    #page4 .side-part-icon {
+        width: 22px !important;
+        height: 22px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Кнопки в боковой панели */
+    #page4 .side-btn,
+    #page4 .contact-btn {
+        width: 100% !important;
+        padding: 14px !important;
+        font-size: 11px !important;
+        margin-bottom: 10px !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    #page4 .side-btn {
+        background: linear-gradient(180deg, #e8c977 0%, #c9a961 50%, #b8943f 100%) !important;
+        color: #1a1a1a !important;
+        border: none !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+    }
+    
+    #page4 .contact-btn {
+        background: rgba(201, 169, 97, 0.15) !important;
+        border: 1.5px solid #c9a961 !important;
+        color: #c9a961 !important;
+        border-radius: 6px !important;
+        cursor: pointer !important;
+    }
+    
+    /* Футер на 4 странице */
+    #page4 .footer-note {
+        margin-top: 20px !important;
+        margin-bottom: 30px !important;
+        font-size: 9px !important;
+        color: #888 !important;
+        text-align: center !important;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    #page4 .doc-card {
+        min-height: 90px !important;
+        padding: 10px 8px !important;
+    }
+    
+    #page4 .doc-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    #page4 .doc-title {
+        font-size: 9px !important;
+    }
+    
+    #page4 .side-part {
+        padding: 12px !important;
+    }
+}
     </style>
 </head>
 <body>
