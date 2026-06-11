@@ -1675,78 +1675,26 @@ body {
     #page4 .doc-icon { width: 26px !important; height: 26px !important; }
     #page4 .doc-title { font-size: 9px !important; }
 }
-     /* ===== ИСПРАВЛЕНИЕ PDF И КНОПКИ ===== */
+     /* ===== ТОЧНОЕ ИСПРАВЛЕНИЕ PDF И КНОПКИ ===== */
 
 @media (max-width: 768px) {
     
-    /* 4 страница - PDF внутри карточки */
+    /* PDF внутри карточки на 4 странице */
     #page4 .doc-card {
+        padding: 10px 12px 35px 12px !important;
         position: relative !important;
-        overflow: hidden !important;
-        padding-bottom: 30px !important;
+        margin-bottom: 10px !important;
     }
     
     #page4 .doc-meta {
         position: absolute !important;
-        bottom: 8px !important;
-        left: 0 !important;
-        right: 0 !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 6px !important;
+        bottom: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
         margin: 0 !important;
-    }
-    
-    #page4 .doc-size {
-        font-size: 9px !important;
-        color: #c9a961 !important;
-    }
-    
-    #page4 .doc-download {
-        width: 16px !important;
-        height: 16px !important;
-    }
-    
-    /* 2 страница - кнопка не обрезается */
-    #page2 .btn-large {
-        white-space: normal !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 12px 15px !important;
-        font-size: 11px !important;
-        text-align: center !important;
-        justify-content: center !important;
-        line-height: 1.3 !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Контейнер кнопки на 2 странице */
-    #page2 .concept-footer {
-        flex-direction: column !important;
-        gap: 10px !important;
-        width: 100% !important;
-    }
-    
-    #page2 .concept-footer-left {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-}
-     /* ===== ИСПРАВЛЕНИЕ PDF СНАРУЖИ КАРТОЧКИ ===== */
-
-@media (max-width: 768px) {
-    
-    /* Поднимаем PDF внутрь карточки */
-    #page4 .doc-meta {
-        margin-top: -35px !important;
-        margin-bottom: 25px !important;
         display: flex !important;
-        justify-content: center !important;
         align-items: center !important;
         gap: 6px !important;
-        position: relative !important;
-        z-index: 5 !important;
     }
     
     #page4 .doc-size {
@@ -1759,31 +1707,22 @@ body {
         height: 16px !important;
     }
     
-    /* Уменьшаем отступ между карточками чтобы PDF не вылезал */
-    #page4 .docs-grid {
-        gap: 0 !important;
-    }
-    
-    #page4 .doc-card {
-        margin-bottom: 5px !important;
-    }
-    
-    /* 2 страница - кнопка не обрезается */
+    /* Кнопка на 2 странице не обрезается */
     #page2 .btn-large {
         white-space: normal !important;
-        width: auto !important;
-        min-width: 200px !important;
-        padding: 12px 20px !important;
+        word-wrap: break-word !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        padding: 12px 15px !important;
         font-size: 11px !important;
         text-align: center !important;
         line-height: 1.3 !important;
         overflow: visible !important;
+        box-sizing: border-box !important;
     }
     
-    /* Контейнер кнопки на 2 странице */
     #page2 .concept-footer {
         flex-wrap: wrap !important;
-        gap: 15px !important;
         width: 100% !important;
         overflow: visible !important;
     }
