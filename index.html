@@ -2987,11 +2987,22 @@ img {
         position: absolute !important;
     }
 }
-    /* ===== ИСПРАВЛЕНИЕ 4 СТРАНИЦЫ И ФОНА НА МОБИЛЬНЫХ ===== */
+   /* ===== ФИНАЛЬНОЕ ИСПРАВЛЕНИЕ ===== */
 
-@media (max-width: 768px) {
-    /* Фон виден полностью на всех страницах */
-    .bg-image {
+@media screen and (max-width: 768px) {
+    
+    /* Сброс всех старых стилей для 4 страницы */
+    #page4,
+    #page4 *,
+    #page4 .docs-main,
+    #page4 .docs-grid,
+    #page4 .docs-side,
+    #page4 .doc-card {
+        all: revert !important;
+    }
+    
+    /* Фон на всех страницах */
+    .page.active .bg-image {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
@@ -3001,62 +3012,74 @@ img {
         z-index: 1 !important;
     }
     
-    .overlay {
+    .page.active .overlay {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        background: rgba(0, 0, 0, 0.7) !important;
+        background: rgba(0,0,0,0.75) !important;
         z-index: 2 !important;
     }
     
-    /* Прокрутка на всех страницах */
-    .page {
+    /* 4 страница - простая структура */
+    #page4 {
+        position: relative !important;
         height: auto !important;
         min-height: 100vh !important;
-        overflow-y: auto !important;
+        overflow: visible !important;
     }
     
-    .content {
+    #page4 .content {
+        position: relative !important;
+        z-index: 3 !important;
         height: auto !important;
         min-height: 100vh !important;
         padding: 70px 15px 30px !important;
+        display: block !important;
     }
     
-    /* ===== 4 СТРАНИЦА ===== */
-    #page4 .docs-main {
+    /* Карточки в столбик */
+    #page4 .docs-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px !important;
-    }
-    
-    #page4 .docs-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
         gap: 10px !important;
+        margin-bottom: 20px !important;
     }
     
     #page4 .doc-card {
         width: 100% !important;
-        min-height: 95px !important;
+        min-height: 90px !important;
         padding: 12px !important;
+        background: rgba(15, 25, 50, 0.92) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 6px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
+    /* Боковая панель под карточками */
     #page4 .docs-side {
         width: 100% !important;
-        position: static !important;
-        margin-top: 10px !important;
+        display: block !important;
+        margin-top: 20px !important;
     }
     
     #page4 .side-part {
         width: 100% !important;
         padding: 15px !important;
+        background: rgba(15, 25, 50, 0.92) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 6px !important;
     }
     
     #page4 .side-btn,
     #page4 .contact-btn {
         width: 100% !important;
+        display: block !important;
+        margin-bottom: 10px !important;
     }
 }
     </style>
