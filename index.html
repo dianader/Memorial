@@ -1758,6 +1758,51 @@ body {
         height: 24px !important;
     }
 }
+/* ===== ФУТЕР С ГЕРБОМ ===== */
+.footer-emblem {
+    width: 36px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-emblem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .footer-emblem {
+        width: 32px !important;
+        height: 38px !important;
+    }
+    
+    .footer-text {
+        font-size: 9px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-bar {
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: flex-start !important;
+    }
+    
+    .footer-emblem {
+        width: 40px !important;
+        height: 46px !important;
+    }
+    
+    .footer-text {
+        font-size: 10px !important;
+        line-height: 1.4 !important;
+    }
+}
 </style>
 </style>
 </head>
@@ -1845,16 +1890,15 @@ body {
                     <div class="info-location">г. Пенза, ул. Свердлова, 19</div>
                     <div class="info-desc">Территория в центре города, рядом с действующими социально значимыми объектами.</div>
                 </div>
-                <div class="info-note">*Срок может уточняться по мере проектирования и согласований.</div>
-            </div>
-        </div>
-        <div class="footer-bar">
-            <div class="footer-emblem">
-                <svg viewBox="0 0 70 80"><path d="M35 5 L60 18 L60 50 L35 75 L10 50 L10 18 Z" fill="#1a2040" stroke="#c9a961" stroke-width="2"/><path d="M35 20 Q28 14 22 16 Q18 20 20 26 Q16 28 17 33 L14 45 L18 47 L24 38 L27 52 L24 62 L30 64 L35 52 L40 64 L46 62 L43 52 L46 38 L52 47 L56 45 L53 33 Q54 28 50 26 Q52 20 48 16 Q42 14 35 20 Z" fill="#c9a961"/></svg>
-            </div>
-            <div class="footer-text">Проект реализуется Пензенской региональной общественной организацией<br><span class="org-name">«Лига ветеранов службы по борьбе с организованной преступностью».</span></div>
-        </div>
+           <div class="footer-bar">
+    <div class="footer-emblem">
+        <img src="img/liga.jpg" alt="Лига ветеранов">
     </div>
+    <div class="footer-text">
+        Проект реализуется Пензенской региональной общественной организацией<br>
+        <span class="org-name">«Лига ветеранов службы по борьбе с организованной преступностью».</span>
+    </div>
+</div>
 </section>
 
 <!-- ==================== СТРАНИЦА 2 ==================== -->
