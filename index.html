@@ -3023,6 +3023,153 @@ img {
         margin: 10px 0 !important;
     }
 }
+        /* ===== 4 СТРАНИЦА - ФИНАЛЬНЫЙ КОД ===== */
+
+@media (max-width: 768px) {
+    
+    /* Убираем лишний отступ после заголовка */
+    #page4 .docs-header {
+        margin-bottom: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    
+    #page4 .docs-title {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    #page4 .docs-subtitle {
+        font-size: 11px !important;
+        margin-bottom: 4px !important;
+    }
+    
+    #page4 .docs-note {
+        font-size: 9px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Разделитель */
+    #page4 .docs-header hr {
+        margin: 8px 0 !important;
+    }
+    
+    /* Контент страницы */
+    #page4 .content {
+        padding: 70px 12px 20px 12px !important;
+    }
+    
+    /* ГЛАВНОЕ: родитель в столбик, НЕ в ряд */
+    #page4 .docs-main {
+        display: block !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 0 !important;
+    }
+    
+    /* Сетка карточек - в столбик */
+    #page4 .docs-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 8px !important;
+        margin: 0 0 15px 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Каждая карточка - по ширине экрана */
+    #page4 .doc-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 85px !important;
+        min-height: 85px !important;
+        max-height: 85px !important;
+        margin: 0 !important;
+        padding: 10px 12px !important;
+        box-sizing: border-box !important;
+        background: rgba(15, 25, 50, 0.95) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 8px !important;
+    }
+    
+    #page4 .doc-icon {
+        width: 28px !important;
+        height: 28px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    #page4 .doc-title {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 4px !important;
+    }
+    
+    #page4 .doc-size {
+        font-size: 9px !important;
+    }
+    
+    /* КРИТИЧНО: боковая панель СТРОГО под карточками */
+    #page4 .docs-side {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        float: none !important;
+        clear: both !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        z-index: auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Содержимое панели */
+    #page4 .side-part {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px 12px !important;
+        margin: 0 !important;
+        background: rgba(15, 25, 50, 0.95) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 8px !important;
+        box-sizing: border-box !important;
+    }
+    
+    #page4 .side-part-title {
+        font-size: 12px !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+        border-bottom: 1px solid rgba(201, 169, 97, 0.3) !important;
+    }
+    
+    #page4 .side-part-item {
+        font-size: 11px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    #page4 .side-part-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    /* Кнопки в панели */
+    #page4 .side-btn,
+    #page4 .contact-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px !important;
+        font-size: 11px !important;
+        margin: 10px 0 0 0 !important;
+        box-sizing: border-box !important;
+        display: block !important;
+    }
+}
 </style>
 </head>
 <body>
