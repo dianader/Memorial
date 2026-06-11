@@ -3198,6 +3198,135 @@ img {
         margin-bottom: 10px !important;
     }
 }
+    /* ===== ИСПРАВЛЕНИЕ 4 СТРАНИЦЫ НА МОБИЛЬНОМ ===== */
+
+@media (max-width: 768px) {
+    
+    /* 4 страница - убираем лишние отступы */
+    #page4 .content {
+        padding: 70px 10px 20px 10px !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Карточки - уменьшаем и делаем компактными */
+    #page4 .doc-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 80px !important;
+        max-height: 90px !important;
+        height: 85px !important;
+        padding: 10px 8px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Сетка карточек - уменьшаем отступы */
+    #page4 .docs-grid {
+        gap: 8px !important;
+        margin-bottom: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Иконки меньше */
+    #page4 .doc-icon {
+        width: 28px !important;
+        height: 28px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    /* Текст меньше */
+    #page4 .doc-title {
+        font-size: 9px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 4px !important;
+    }
+    
+    #page4 .doc-size {
+        font-size: 8px !important;
+    }
+    
+    /* Боковая панель - НЕ ВЫЛЕЗАЕТ за экран */
+    #page4 .docs-side {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 15px 0 0 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+    
+    #page4 .side-part {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 10px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    #page4 .side-part-title {
+        font-size: 11px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    #page4 .side-part-item {
+        font-size: 10px !important;
+        gap: 8px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    #page4 .side-part-icon {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    /* Кнопки не вылезают */
+    #page4 .side-btn,
+    #page4 .contact-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 10px !important;
+        font-size: 10px !important;
+        margin-bottom: 8px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Заголовок меньше */
+    #page4 .docs-title {
+        font-size: 22px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    #page4 .docs-subtitle {
+        font-size: 11px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    #page4 .docs-note {
+        font-size: 9px !important;
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 380px) {
+    #page4 .doc-card {
+        min-height: 75px !important;
+        max-height: 80px !important;
+        height: 78px !important;
+        padding: 8px 6px !important;
+    }
+    
+    #page4 .doc-title {
+        font-size: 8px !important;
+    }
+    
+    #page4 .doc-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
     </style>
 </head>
 <body>
