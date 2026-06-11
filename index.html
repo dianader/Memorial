@@ -4000,6 +4000,62 @@ function openFile(fileName) {
 </script>
 
 
-
+<script>
+// Принудительное исправление 4 страницы на мобильных
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 768) {
+        var page4 = document.getElementById('page4');
+        if (page4) {
+            var side = page4.querySelector('.docs-side');
+            var main = page4.querySelector('.docs-main');
+            var grid = page4.querySelector('.docs-grid');
+            
+            if (main) {
+                main.style.display = 'block';
+                main.style.flexDirection = 'column';
+                main.style.width = '100%';
+            }
+            
+            if (grid) {
+                grid.style.display = 'flex';
+                grid.style.flexDirection = 'column';
+                grid.style.gap = '8px';
+                grid.style.marginBottom = '15px';
+            }
+            
+            if (side) {
+                side.style.position = 'static';
+                side.style.top = 'auto';
+                side.style.right = 'auto';
+                side.style.left = 'auto';
+                side.style.width = '100%';
+                side.style.marginTop = '15px';
+                side.style.clear = 'both';
+                side.style.display = 'block';
+            }
+            
+            var cards = page4.querySelectorAll('.doc-card');
+            cards.forEach(function(card) {
+                card.style.width = '100%';
+                card.style.height = '85px';
+                card.style.marginBottom = '8px';
+            });
+            
+            var sidePart = page4.querySelector('.side-part');
+            if (sidePart) {
+                sidePart.style.width = '100%';
+                sidePart.style.padding = '15px';
+            }
+            
+            var btns = page4.querySelectorAll('.side-btn, .contact-btn');
+            btns.forEach(function(btn) {
+                btn.style.width = '100%';
+                btn.style.display = 'block';
+                btn.style.marginTop = '10px';
+            });
+        }
+    }
+});
+</script>
 </body>
 </html>
