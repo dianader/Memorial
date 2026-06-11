@@ -2689,10 +2689,35 @@ img {
         padding: 12px !important;
     }
 }
-        /* ===== 4 СТРАНИЦА - ФИНАЛЬНЫЕ ИСПРАВЛЕНИЯ ===== */
+      /* ===== ГАРАНТИРОВАННОЕ ИСПРАВЛЕНИЕ 4 СТРАНИЦЫ ===== */
 
 @media (max-width: 768px) {
-    /* 4 страница - общий контейнер */
+    
+    /* 1. ФОН НА ВСЕХ СТРАНИЦАХ */
+    .page.active .bg-image {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        object-fit: cover !important;
+        z-index: 1 !important;
+        display: block !important;
+        opacity: 1 !important;
+    }
+    
+    .page.active .overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0,0,0,0.7) !important;
+        z-index: 2 !important;
+        display: block !important;
+    }
+    
+    /* 2. 4 СТРАНИЦА - ПРОКРУТКА */
     #page4 {
         height: auto !important;
         min-height: 100vh !important;
@@ -2703,540 +2728,55 @@ img {
     #page4 .content {
         height: auto !important;
         min-height: 100vh !important;
-        padding: 70px 15px 30px !important;
+        padding: 70px 10px 20px 10px !important;
         overflow: visible !important;
         display: block !important;
     }
     
-    /* Заголовок 4 страницы */
-    #page4 .docs-header {
-        margin-bottom: 25px !important;
-        padding-bottom: 15px !important;
-        border-bottom: 1px solid rgba(201, 169, 97, 0.3) !important;
-    }
-    
-    #page4 .docs-title {
-        font-size: 26px !important;
-        font-weight: 900 !important;
-        margin-bottom: 12px !important;
-        letter-spacing: 1px !important;
-    }
-    
-    #page4 .docs-subtitle {
-        font-size: 12px !important;
-        line-height: 1.5 !important;
-        margin-bottom: 8px !important;
-        color: #ddd !important;
-    }
-    
-    #page4 .docs-note {
-        font-size: 10px !important;
-        color: #c9a961 !important;
-        font-style: italic !important;
-    }
-    
-    /* Карточки документов */
+    /* 3. КОНТЕЙНЕР В СТОЛБИК */
     #page4 .docs-main {
         display: flex !important;
         flex-direction: column !important;
-        gap: 25px !important;
-        margin-bottom: 25px !important;
-    }
-    
-    #page4 .docs-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
         width: 100% !important;
-    }
-    
-    #page4 .doc-card {
-        min-height: 100px !important;
-        height: auto !important;
-        padding: 15px 12px !important;
-        width: 100% !important;
-        border-radius: 8px !important;
-        background: rgba(15, 25, 50, 0.92) !important;
-        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
-    }
-    
-    #page4 .doc-icon {
-        width: 36px !important;
-        height: 36px !important;
-        margin-bottom: 10px !important;
-    }
-    
-    #page4 .doc-title {
-        font-size: 11px !important;
-        font-weight: 700 !important;
-        line-height: 1.3 !important;
-        margin-bottom: 8px !important;
-        color: #c9a961 !important;
-    }
-    
-    #page4 .doc-desc {
-        display: block !important;
-        font-size: 9px !important;
-        line-height: 1.3 !important;
-        margin-bottom: 8px !important;
-        color: #bbb !important;
-    }
-    
-    #page4 .doc-meta {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 8px !important;
-    }
-    
-    #page4 .doc-size {
-        font-size: 10px !important;
-        color: #c9a961 !important;
-        font-weight: 600 !important;
-    }
-    
-    /* Боковая панель - красивое оформление */
-    #page4 .docs-side {
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
+        max-width: 100% !important;
         gap: 15px !important;
-        margin-top: 10px !important;
-    }
-    
-    #page4 .side-part {
-        padding: 20px 18px !important;
-        width: 100% !important;
-        border-radius: 8px !important;
-        background: rgba(15, 25, 50, 0.92) !important;
-        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
-    }
-    
-    #page4 .side-part-title {
-        font-size: 12px !important;
-        font-weight: 700 !important;
-        color: #c9a961 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 1.5px !important;
-        margin-bottom: 15px !important;
-        padding-bottom: 10px !important;
-        border-bottom: 1px solid rgba(201, 169, 97, 0.3) !important;
-    }
-    
-    #page4 .side-part-list {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-        margin-bottom: 18px !important;
-    }
-    
-    #page4 .side-part-item {
-        display: flex !important;
-        align-items: flex-start !important;
-        gap: 12px !important;
-        font-size: 11px !important;
-        color: #ddd !important;
-        line-height: 1.4 !important;
-    }
-    
-    #page4 .side-part-icon {
-        width: 22px !important;
-        height: 22px !important;
-        flex-shrink: 0 !important;
-        margin-top: 2px !important;
-    }
-    
-    #page4 .side-part-icon svg {
-        width: 100% !important;
-        height: 100% !important;
-    }
-    
-    /* Кнопки */
-    #page4 .side-btn {
-        width: 100% !important;
-        padding: 14px 20px !important;
-        font-size: 12px !important;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 1px !important;
-        border-radius: 6px !important;
-        background: linear-gradient(180deg, #e8c977 0%, #c9a961 50%, #b8943f 100%) !important;
-        color: #1a1a1a !important;
-        border: none !important;
-        cursor: pointer !important;
-        margin-bottom: 10px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 8px !important;
-    }
-    
-    #page4 .contact-btn {
-        width: 100% !important;
-        padding: 14px 20px !important;
-        font-size: 12px !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 1px !important;
-        border-radius: 6px !important;
-        background: rgba(201, 169, 97, 0.1
-                         /* ===== УЛУЧШЕНИЕ ФОНА НА МОБИЛЬНЫХ ===== */
-
-@media (max-width: 768px) {
-    /* Фон на всех страницах мобильных */
-    .page .bg-image {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-        z-index: 1 !important;
-        opacity: 1 !important;
-        display: block !important;
-    }
-    
-    /* Показываем фон только активной страницы */
-    .page:not(.active) .bg-image {
-        display: none !important;
-    }
-    
-    .page.active .bg-image {
-        display: block !important;
-    }
-    
-    /* Затемнение фона */
-    .page .overlay {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.82) 50%,
-            rgba(0, 0, 0, 0.88) 100%
-        ) !important;
-        z-index: 2 !important;
-        display: block !important;
-    }
-    
-    .page:not(.active) .overlay {
-        display: none !important;
-    }
-    
-    .page.active .overlay {
-        display: block !important;
-    }
-    
-    /* Контент поверх фона */
-    .page.active .content {
-        position: relative !important;
-        z-index: 3 !important;
-    }
-    
-    /* Кнопка НАЗАД поверх всего */
-    .back-button {
-        position: fixed !important;
-        top: 12px !important;
-        right: 12px !important;
-        z-index: 100 !important;
-    }
-    
-    /* Улучшаем видимость фона на каждой странице */
-    #page1 .bg-image {
-        object-position: center center !important;
-    }
-    
-    #page2 .bg-image {
-        object-position: center top !important;
-    }
-    
-    #page3 .bg-image {
-        object-position: center center !important;
-    }
-    
-    #page4 .bg-image {
-        object-position: center center !important;
-    }
-    
-    /* Плавный переход между страницами */
-    .page.active .bg-image {
-        animation: fadeInBg 0.5s ease-in-out !important;
-    }
-    
-    @keyframes fadeInBg {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-}
-
-/* На компьютерах оставляем как есть */
-@media (min-width: 769px) {
-    .page .bg-image {
-        position: absolute !important;
-    }
-    
-    .page .overlay {
-        position: absolute !important;
-    }
-}
-   /* ===== ФИНАЛЬНОЕ ИСПРАВЛЕНИЕ ===== */
-
-@media screen and (max-width: 768px) {
-    
-    /* Сброс всех старых стилей для 4 страницы */
-    #page4,
-    #page4 *,
-    #page4 .docs-main,
-    #page4 .docs-grid,
-    #page4 .docs-side,
-    #page4 .doc-card {
-        all: revert !important;
-    }
-    
-    /* Фон на всех страницах */
-    .page.active .bg-image {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        object-fit: cover !important;
-        z-index: 1 !important;
-    }
-    
-    .page.active .overlay {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        background: rgba(0,0,0,0.75) !important;
-        z-index: 2 !important;
-    }
-    
-    /* 4 страница - простая структура */
-    #page4 {
-        position: relative !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        overflow: visible !important;
-    }
-    
-    #page4 .content {
-        position: relative !important;
-        z-index: 3 !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 70px 15px 30px !important;
-        display: block !important;
-    }
-    
-    /* Карточки в столбик */
-    #page4 .docs-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    #page4 .doc-card {
-        width: 100% !important;
-        min-height: 90px !important;
-        padding: 12px !important;
-        background: rgba(15, 25, 50, 0.92) !important;
-        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
-        border-radius: 6px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    /* Боковая панель под карточками */
-    #page4 .docs-side {
-        width: 100% !important;
-        display: block !important;
-        margin-top: 20px !important;
-    }
-    
-    #page4 .side-part {
-        width: 100% !important;
-        padding: 15px !important;
-        background: rgba(15, 25, 50, 0.92) !important;
-        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
-        border-radius: 6px !important;
-    }
-    
-    #page4 .side-btn,
-    #page4 .contact-btn {
-        width: 100% !important;
-        display: block !important;
-        margin-bottom: 10px !important;
-    }
-}
-    /* ===== РАДИКАЛЬНОЕ ИСПРАВЛЕНИЕ МОБИЛЬНОЙ ВЕРСИИ ===== */
-
-@media only screen and (max-width: 768px) {
-
-    /* СБРОС ВСЕГО */
-    html, body {
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
-        height: auto !important;
-        width: 100% !important;
-    }
-
-    /* ФОН НА ВСЕХ СТРАНИЦАХ */
-    .page.active > .bg-image,
-    .page.active > .overlay {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: 1 !important;
-    }
-
-    .page.active > .bg-image {
-        object-fit: cover !important;
-        object-position: center center !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-    }
-
-    .page.active > .overlay {
-        background: rgba(0,0,0,0.7) !important;
-        display: block !important;
-    }
-
-    /* СКРЫВАЕМ ФОН НЕАКТИВНЫХ СТРАНИЦ */
-    .page:not(.active) > .bg-image,
-    .page:not(.active) > .overlay {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-
-    /* КОНТЕНТ */
-    .page.active > .content {
-        position: relative !important;
-        z-index: 10 !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 70px 15px 30px !important;
-        overflow: visible !important;
-        display: block !important;
-    }
-
-    /* ===== 4 СТРАНИЦА - ПОЛНЫЙ СБРОС ===== */
-    #page4.active {
-        height: auto !important;
-        min-height: 100vh !important;
-        overflow: visible !important;
-    }
-
-    #page4.active > .content {
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 70px 15px 30px !important;
-    }
-
-    #page4.active .docs-main {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    #page4.active .docs-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;
-        width: 100% !important;
-        margin-bottom: 20px !important;
-    }
-
-    #page4.active .doc-card {
-        width: 100% !important;
-        min-height: 90px !important;
-        padding: 12px !important;
-        background: rgba(15, 25, 50, 0.92) !important;
-        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
-        border-radius: 6px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    #page4.active .docs-side {
-        display: block !important;
-        width: 100% !important;
-        position: static !important;
-        margin-top: 20px !important;
-    }
-
-    #page4.active .side-part {
-        width: 100% !important;
-        padding: 15px !important;
-        background: rgba(15, 25, 50, 0.92) !important;
-        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
-        border-radius: 6px !important;
-    }
-
-    #page4.active .side-btn,
-    #page4.active .contact-btn {
-        width: 100% !important;
-        display: block !important;
-        margin-bottom: 10px !important;
-    }
-}
-    /* ===== ИСПРАВЛЕНИЕ 4 СТРАНИЦЫ НА МОБИЛЬНОМ ===== */
-
-@media (max-width: 768px) {
-    
-    /* 4 страница - убираем лишние отступы */
-    #page4 .content {
-        padding: 70px 10px 20px 10px !important;
-        overflow-x: hidden !important;
-    }
-    
-    /* Карточки - уменьшаем и делаем компактными */
-    #page4 .doc-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-height: 80px !important;
-        max-height: 90px !important;
-        height: 85px !important;
-        padding: 10px 8px !important;
         margin: 0 !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Сетка карточек - уменьшаем отступы */
-    #page4 .docs-grid {
-        gap: 8px !important;
-        margin-bottom: 15px !important;
-        width: 100% !important;
-        max-width: 100% !important;
         padding: 0 !important;
     }
     
-    /* Иконки меньше */
+    /* 4. СЕТКА КАРТОЧЕК */
+    #page4 .docs-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 8px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* 5. КАЖДАЯ КАРТОЧКА - КОМПАКТНАЯ */
+    #page4 .doc-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 75px !important;
+        max-height: 85px !important;
+        height: 80px !important;
+        padding: 10px 8px !important;
+        margin: 0 !important;
+        background: rgba(15, 25, 50, 0.92) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 6px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* 6. ИКОНКИ И ТЕКСТ МЕНЬШЕ */
     #page4 .doc-icon {
         width: 28px !important;
         height: 28px !important;
         margin-bottom: 5px !important;
     }
     
-    /* Текст меньше */
     #page4 .doc-title {
         font-size: 9px !important;
         line-height: 1.2 !important;
@@ -3247,14 +2787,19 @@ img {
         font-size: 8px !important;
     }
     
-    /* Боковая панель - НЕ ВЫЛЕЗАЕТ за экран */
+    /* 7. БОКОВАЯ ПАНЕЛЬ - СТРОГО ПОД КАРТОЧКАМИ */
     #page4 .docs-side {
+        position: relative !important;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 15px 0 0 0 !important;
+        margin: 0 !important;
         padding: 0 !important;
         box-sizing: border-box !important;
-        overflow: hidden !important;
+        clear: both !important;
     }
     
     #page4 .side-part {
@@ -3262,6 +2807,9 @@ img {
         max-width: 100% !important;
         padding: 12px 10px !important;
         margin: 0 !important;
+        background: rgba(15, 25, 50, 0.92) !important;
+        border: 1.5px solid rgba(201, 169, 97, 0.5) !important;
+        border-radius: 6px !important;
         box-sizing: border-box !important;
     }
     
@@ -3281,7 +2829,7 @@ img {
         height: 18px !important;
     }
     
-    /* Кнопки не вылезают */
+    /* 8. КНОПКИ В ПАНЕЛИ */
     #page4 .side-btn,
     #page4 .contact-btn {
         width: 100% !important;
@@ -3292,7 +2840,7 @@ img {
         box-sizing: border-box !important;
     }
     
-    /* Заголовок меньше */
+    /* 9. ЗАГОЛОВОК СТРАНИЦЫ */
     #page4 .docs-title {
         font-size: 22px !important;
         margin-bottom: 10px !important;
@@ -3306,25 +2854,6 @@ img {
     #page4 .docs-note {
         font-size: 9px !important;
         margin-bottom: 15px !important;
-    }
-}
-
-/* Для очень маленьких экранов */
-@media (max-width: 380px) {
-    #page4 .doc-card {
-        min-height: 75px !important;
-        max-height: 80px !important;
-        height: 78px !important;
-        padding: 8px 6px !important;
-    }
-    
-    #page4 .doc-title {
-        font-size: 8px !important;
-    }
-    
-    #page4 .doc-icon {
-        width: 24px !important;
-        height: 24px !important;
     }
 }
     </style>
