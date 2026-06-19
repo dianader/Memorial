@@ -2260,7 +2260,7 @@ body {
         </div>
     </div>
 
-    <!-- 8. ПЛАН РЕАЛИЗАЦИИ -->
+     <!-- 8. ГЕРОИ ПЕНЗЕНСКОЙ ЗЕМЛИ -->
     <div class="doc-card" onclick="openFile('Герои pdf.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2276,7 +2276,11 @@ body {
         <div class="doc-title">ГЕРОИ<br>ПЕНЗЕНСКОЙ<br>ЗЕМЛИ</div>
         <div class="doc-meta">
             <span class="doc-size">PDF</span>
-            <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17
+            <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        </div>
+    </div>
+
+   
 
     <!-- 6. РЕКВИЗИТЫ -->
     <div class="doc-card" onclick="openRequisitesModal()">
@@ -2341,63 +2345,71 @@ body {
             Документы представлены в формате PDF. Для просмотра необходим Adobe Reader или другой PDF-ридер.
         </div>
     </div>
-<div class="letters-list">
-    <div class="letter-item" onclick="openFile('Пенза.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Письмо Администрации города Пензы</div>
-            <div class="letter-size">PDF · 1.2 МБ</div>
+<!-- Модальное окно для ПИСЕМ ПОДДЕРЖКИ -->
+<div class="modal" id="lettersModal">
+    <div class="modal-content" style="max-width: 650px;">
+        <div class="modal-close" onclick="closeLettersModal()">×</div>
+        <div class="modal-title">ПИСЬМА ПОДДЕРЖКИ</div>
+        <div class="letters-list">
+            <div class="letter-item" onclick="openFile('Пенза.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Письмо Администрации города Пензы</div>
+                    <div class="letter-size">PDF · 1.2 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('Правительство.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Письмо Правительства Пензенской области</div>
+                    <div class="letter-size">PDF · 1.5 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('Федеральная служба.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Федеральная служба</div>
+                    <div class="letter-size">PDF · 0.9 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('Письмо Администрации.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Письмо Администрации</div>
+                    <div class="letter-size">PDF · 1.1 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('Благотворительный фонд «Альфа».pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Благотворительный фонд «Альфа»</div>
+                    <div class="letter-size">PDF · 1.0 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('Законодательное собрание Пензенской области.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Законодательное собрание Пензенской области</div>
+                    <div class="letter-size">PDF · 1.0 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('УФСИН.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">УФСИН</div>
+                    <div class="letter-size">PDF · 1.0 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openFile('Управление ФСБ по Пензенской области.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Управление ФСБ по Пензенской областиpdf</div>
+                    <div class="letter-size">PDF · 1.0 МБ</div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="letter-item" onclick="openFile('Правительство.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Письмо Правительства Пензенской области</div>
-            <div class="letter-size">PDF · 1.5 МБ</div>
-        </div>
-    </div>
-    <div class="letter-item" onclick="openFile('Федеральная служба.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Федеральная служба</div>
-            <div class="letter-size">PDF · 0.9 МБ</div>
-        </div>
-    </div>
-    <div class="letter-item" onclick="openFile('Письмо Администрации.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Письмо Администрации</div>
-            <div class="letter-size">PDF · 1.1 МБ</div>
-        </div>
-    </div>
-    <div class="letter-item" onclick="openFile('Благотворительный фонд «Альфа».pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Благотворительный фонд «Альфа»</div>
-            <div class="letter-size">PDF · 1.0 МБ</div>
-        </div>
-    </div>
-    <div class="letter-item" onclick="openFile('Законодательное собрание Пензенской области .pdf.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Законодательное собрание Пензенской области</div>
-            <div class="letter-size">PDF · 1.0 МБ</div>
-        </div>
-    </div>
-    <div class="letter-item" onclick="openFile('УФСИН.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">УФСИН</div>
-            <div class="letter-size">PDF · 1.0 МБ</div>
-        </div>
-    </div>
-    <div class="letter-item" onclick="openFile('Управление ФСБ по Пензенской областиpdf.pdf')">
-        <div class="letter-icon">📄</div>
-        <div class="letter-info">
-            <div class="letter-name">Управление ФСБ по Пензенской области</div>
-            <div class="letter-size">PDF · 1.0 МБ</div>
-        </div>
-    </div>
+</div>
 </div>
 
 <!-- Модальное окно для РЕКВИЗИТОВ -->
@@ -2507,6 +2519,7 @@ body {
 
     // Открытие файла в браузере
     function openFile(fileName) {
+        console.log('Opening file:', fileName);
         const filePath = 'files/' + fileName;
         window.open(filePath, '_blank');
     }
@@ -2521,143 +2534,116 @@ body {
         document.getElementById('contactModal').classList.remove('active');
     }
 
-    // Закрытие модального окна при клике вне его
+    // Открытие модального окна писем поддержки
+    function openLettersModal() {
+        console.log('Opening letters modal');
+        const modal = document.getElementById('lettersModal');
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие модального окна писем
+    function closeLettersModal() {
+        const modal = document.getElementById('lettersModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Открытие модального окна реквизитов
+    function openRequisitesModal() {
+        console.log('Opening requisites modal');
+        const modal = document.getElementById('requisitesModal');
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие модального окна реквизитов
+    function closeRequisitesModal() {
+        const modal = document.getElementById('requisitesModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Закрытие модальных окон при клике вне их
     window.onclick = function(event) {
-        const modal = document.getElementById('contactModal');
-        if (event.target == modal) {
+        const lettersModal = document.getElementById('lettersModal');
+        const requisitesModal = document.getElementById('requisitesModal');
+        const contactModal = document.getElementById('contactModal');
+        
+        if (event.target == lettersModal) {
+            closeLettersModal();
+        }
+        if (event.target == requisitesModal) {
+            closeRequisitesModal();
+        }
+        if (event.target == contactModal) {
             closeContactModal();
         }
     }
-    // Открытие модального окна писем поддержки
-function openLettersModal() {
-    console.log('Opening letters modal');
-    const modal = document.getElementById('lettersModal');
-    if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-}
 
-// Закрытие модального окна писем
-function closeLettersModal() {
-    const modal = document.getElementById('lettersModal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-}
-
-// Открытие модального окна реквизитов
-function openRequisitesModal() {
-    console.log('Opening requisites modal');
-    const modal = document.getElementById('requisitesModal');
-    if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-// Закрытие модального окна реквизитов
-function closeRequisitesModal() {
-    const modal = document.getElementById('requisitesModal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-}
-
-// Закрытие модальных окон при клике вне их
-window.onclick = function(event) {
-    const lettersModal = document.getElementById('lettersModal');
-    const requisitesModal = document.getElementById('requisitesModal');
-    const contactModal = document.getElementById('contactModal');
-    
-    if (event.target == lettersModal) {
-        closeLettersModal();
-    }
-    if (event.target == requisitesModal) {
-        closeRequisitesModal();
-    }
-    if (event.target == contactModal) {
-        closeContactModal();
-    }
-}
-
-// Открытие файла в браузере
-function openFile(fileName) {
-    console.log('Opening file:', fileName);
-    const filePath = 'files/' + fileName;
-    window.open(filePath, '_blank');
-}
-    
-</script>
-
-
-<script>
-// Принудительное исправление 4 страницы на мобильных
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.innerWidth <= 768) {
-        var page4 = document.getElementById('page4');
-        if (page4) {
-            var side = page4.querySelector('.docs-side');
-            var main = page4.querySelector('.docs-main');
-            var grid = page4.querySelector('.docs-grid');
-            
-            if (main) {
-                main.style.display = 'block';
-                main.style.flexDirection = 'column';
-                main.style.width = '100%';
+    // Принудительное исправление 4 страницы на мобильных
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth <= 768) {
+            var page4 = document.getElementById('page4');
+            if (page4) {
+                var side = page4.querySelector('.docs-side');
+                var main = page4.querySelector('.docs-main');
+                var grid = page4.querySelector('.docs-grid');
+                
+                if (main) {
+                    main.style.display = 'block';
+                    main.style.flexDirection = 'column';
+                    main.style.width = '100%';
+                }
+                
+                if (grid) {
+                    grid.style.display = 'flex';
+                    grid.style.flexDirection = 'column';
+                    grid.style.gap = '8px';
+                    grid.style.marginBottom = '15px';
+                }
+                
+                if (side) {
+                    side.style.position = 'static';
+                    side.style.top = 'auto';
+                    side.style.right = 'auto';
+                    side.style.left = 'auto';
+                    side.style.width = '100%';
+                    side.style.marginTop = '15px';
+                    side.style.clear = 'both';
+                    side.style.display = 'block';
+                }
+                
+                var cards = page4.querySelectorAll('.doc-card');
+                cards.forEach(function(card) {
+                    card.style.width = '100%';
+                    card.style.height = '85px';
+                    card.style.marginBottom = '8px';
+                });
+                
+                var sidePart = page4.querySelector('.side-part');
+                if (sidePart) {
+                    sidePart.style.width = '100%';
+                    sidePart.style.padding = '15px';
+                }
+                
+                var btns = page4.querySelectorAll('.side-btn, .contact-btn');
+                btns.forEach(function(btn) {
+                    btn.style.width = '100%';
+                    btn.style.display = 'block';
+                    btn.style.marginTop = '10px';
+                });
             }
-            
-            if (grid) {
-                grid.style.display = 'flex';
-                grid.style.flexDirection = 'column';
-                grid.style.gap = '8px';
-                grid.style.marginBottom = '15px';
-            }
-            
-            if (side) {
-                side.style.position = 'static';
-                side.style.top = 'auto';
-                side.style.right = 'auto';
-                side.style.left = 'auto';
-                side.style.width = '100%';
-                side.style.marginTop = '15px';
-                side.style.clear = 'both';
-                side.style.display = 'block';
-            }
-            
-            var cards = page4.querySelectorAll('.doc-card');
-            cards.forEach(function(card) {
-                card.style.width = '100%';
-                card.style.height = '85px';
-                card.style.marginBottom = '8px';
-            });
-            
-            var sidePart = page4.querySelector('.side-part');
-            if (sidePart) {
-                sidePart.style.width = '100%';
-                sidePart.style.padding = '15px';
-            }
-            
-            var btns = page4.querySelectorAll('.side-btn, .contact-btn');
-            btns.forEach(function(btn) {
-                btn.style.width = '100%';
-                btn.style.display = 'block';
-                btn.style.marginTop = '10px';
-            });
         }
-    }
-});
-    function openLettersModal() {
-    document.getElementById('lettersModal').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function closeLettersModal() {
-    document.getElementById('lettersModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
+    });
 </script>
 </body>
 </html>
