@@ -1826,6 +1826,68 @@ body {
     width: 100% !important;
     box-sizing: border-box !important;
 }
+     /* Стили для модального окна реквизитов */
+#requisitesModal .modal-content {
+    max-width: 650px !important;
+}
+
+#requisitesModal .qr-placeholder {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 97, 0.2);
+}
+
+#requisitesModal .qr-placeholder img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#requisitesModal .modal-section {
+    margin-bottom: 15px;
+}
+
+#requisitesModal .modal-label {
+    font-size: 11px;
+    color: rgba(201, 169, 97, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+#requisitesModal .modal-value {
+    font-size: 14px;
+    color: #c9a961;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+#requisitesModal a {
+    display: inline-block;
+    margin: 15px 0;
+    color: #267646;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: 2px solid #267646;
+    border-radius: 6px;
+}
+
+#requisitesModal [style*="grid"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    margin-top: 25px !important;
+}
+
+#requisitesModal [style*="grid-column"] {
+    grid-column: 1 / -1 !important;
+}
 </style>
 </style>
 </head>
@@ -2385,7 +2447,7 @@ body {
                     <div class="letter-size">PDF · 1.0 МБ</div>
                 </div>
             </div>
-            <div class="letter-item" onclick="openFile('С.pdf')">
+            <div class="letter-item" onclick="openFile('Собрание.pdf')">
                 <div class="letter-icon">📄</div>
                 <div class="letter-info">
                     <div class="letter-name">Законодательное собрание Пензенской области</div>
