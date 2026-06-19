@@ -1795,6 +1795,23 @@ body {
     object-fit: contain;
     display: block;
 }
+     /* Вертикальный список писем */
+.letters-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.letter-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 15px;
+    width: 100% !important;
+    box-sizing: border-box;
+}
 </style>
 </style>
 </head>
@@ -2273,69 +2290,62 @@ body {
             Документы представлены в формате PDF. Для просмотра необходим Adobe Reader или другой PDF-ридер.
         </div>
     </div>
-<!-- Модальное окно для ПИСЕМ ПОДДЕРЖКИ -->
-<div class="modal" id="lettersModal">
-    <div class="modal-content" style="max-width: 650px;">
-        <div class="modal-close" onclick="closeLettersModal()">×</div>
-        <div class="modal-title">ПИСЬМА ПОДДЕРЖКИ</div>
-        <div class="letters-list">
-            <div class="letter-item" onclick="openFile('Пенза.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Письмо Администрации города Пензы</div>
-                    <div class="letter-size">PDF · 1.2 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openFile('Правительство.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Письмо Правительства Пензенской области</div>
-                    <div class="letter-size">PDF · 1.5 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openFile('Федеральная служба.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Федеральная служба</div>
-                    <div class="letter-size">PDF · 0.9 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openFile('Письмо Администрации.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Письмо Администрации</div>
-                    <div class="letter-size">PDF · 1.1 МБ</div>
-                </div>
-                            <div class="letter-item" onclick="openFile('Благотворительный фонд «Альфа »<.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Благотворительный фонд «Альфа»</div>
-                    <div class="letter-size">PDF · 1.0 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openFile('Законодательное собрание Пензенской области.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Законодательное собрание Пензенской области</div>
-                    <div class="letter-size">PDF · 1.0 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openFile('УФСИН.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">УФСИН</div>
-                    <div class="letter-size">PDF · 1.0 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openFile('Управление ФСБ по Пензенской областиpdf.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Управление ФСБ по Пензенской области </div>
-                    <div class="letter-size">PDF · 1.0 МБ</div>
-                </div>
-            </div>
-            </div>
-        </div> 
+<div class="letters-list">
+    <div class="letter-item" onclick="openFile('файлы/Пенза.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Письмо Администрации города Пензы</div>
+            <div class="letter-size">PDF · 1.2 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/Правительство.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Письмо Правительства Пензенской области</div>
+            <div class="letter-size">PDF · 1.5 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/Федеральная служба.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Федеральная служба</div>
+            <div class="letter-size">PDF · 0.9 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/Письмо Администрации.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Письмо Администрации</div>
+            <div class="letter-size">PDF · 1.1 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/Благотворительный фонд «Альфа».pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Благотворительный фонд «Альфа»</div>
+            <div class="letter-size">PDF · 1.0 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/Законодательное собрание Пензенской области.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Законодательное собрание Пензенской области</div>
+            <div class="letter-size">PDF · 1.0 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/УФСИН.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">УФСИН</div>
+            <div class="letter-size">PDF · 1.0 МБ</div>
+        </div>
+    </div>
+    <div class="letter-item" onclick="openFile('файлы/Управление ФСБ по Пензенской области.pdf.pdf')">
+        <div class="letter-icon">📄</div>
+        <div class="letter-info">
+            <div class="letter-name">Управление ФСБ по Пензенской области</div>
+            <div class="letter-size">PDF · 1.0 МБ</div>
+        </div>
     </div>
 </div>
 
