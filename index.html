@@ -2727,54 +2727,7 @@ body {
             <div class="modal-value"><strong>г. Пенза, ул. Свердлова, 19</strong></div>
                <div style="position: absolute; bottom: 12px; right: 18px; font-size: 8px; color: rgba(255, 255, 255, 0.15); letter-spacing: 0.5px; font-weight: 300;">разработчик сайта — Диана Деряпкина</div>
 </div>
-<!-- Модальное окно для КОНЦЕПЦИИ -->
-<div class="modal" id="conceptModal">
-    <div class="modal-content" style="max-width: 650px;">
-        <div class="modal-close" onclick="closeConceptModal()">×</div>
-        <div class="modal-title">КОНЦЕПЦИЯ МЕМОРИАЛЬНОГО КОМПЛЕКСА</div>
-        <div class="letters-list">
-            <div class="letter-item" onclick="openFile('Концепция.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Концепция мемориального комплекса</div>
-                    <div class="letter-size">PDF · 2.5 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openVisualizationModal()">
-                <div class="letter-icon">️</div>
-                <div class="letter-info">
-                    <div class="letter-name">Визуализация мемориального комплекса</div>
-                    <div class="letter-size">5 фото · JPG</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Модальное окно для ВИЗУАЛИЗАЦИИ -->
-<div class="modal" id="visualizationModal">
-    <div class="modal-content" style="max-width: 900px;">
-        <div class="modal-close" onclick="closeVisualizationModal()">×</div>
-        <div class="modal-title">ВИЗУАЛИЗАЦИЯ ПРОЕКТА</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/Визуализация.jpg" alt="Визуализация 1" style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/итог4.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/глав.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/22.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/итог3.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <script>
@@ -2947,5 +2900,53 @@ body {
         document.body.style.overflow = '';
     }
 </script>
+        <!-- Модальное окно для КОНЦЕПЦИИ -->
+<div class="modal" id="conceptModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 650px;">
+        <div class="modal-close" onclick="closeConceptModal()">×</div>
+        <div class="modal-title">КОНЦЕПЦИЯ МЕМОРИАЛЬНОГО КОМПЛЕКСА</div>
+        <div class="letters-list">
+            <div class="letter-item" onclick="openFile('Концепция.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Концепция мемориального комплекса</div>
+                    <div class="letter-size">PDF · 2.5 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openVisualizationModal()">
+                <div class="letter-icon">️</div>
+                <div class="letter-info">
+                    <div class="letter-name">Визуализация мемориального комплекса</div>
+                    <div class="letter-size">5 фото · JPG</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для ВИЗУАЛИЗАЦИИ -->
+<div class="modal" id="visualizationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 900px;">
+        <div class="modal-close" onclick="closeVisualizationModal()">×</div>
+        <div class="modal-title">ВИЗУАЛИЗАЦИЯ ПРОЕКТА</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/Визуализация.jpg" alt="Визуализация 1" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/итог4.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/глав.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/22.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/итог3.jpg" alt="Визуализация " style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
