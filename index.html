@@ -2915,11 +2915,20 @@ body {
             }
         }
     });
-        // Открытие модального окна концепции
-    function openConceptModal() {
-        document.getElementById('conceptModal').classList.add('active');
+      function openConceptModal() {
+    console.log('🔵 Открытие концепции...');
+    const modal = document.getElementById('conceptModal');
+    console.log('🔵 Модальное окно:', modal);
+    
+    if (modal) {
+        modal.classList.add('active');
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        console.log('✅ Модальное окно открыто!');
+    } else {
+        console.error('❌ Модальное окно НЕ НАЙДЕНО!');
     }
+}
 
     // Закрытие модального окна концепции
     function closeConceptModal() {
