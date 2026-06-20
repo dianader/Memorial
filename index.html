@@ -2867,14 +2867,20 @@ body {
             }
         }
     });
-      function openConceptModal() {
+    function openConceptModal() {
     console.log('🔵 Открытие концепции...');
     const modal = document.getElementById('conceptModal');
     console.log('🔵 Модальное окно:', modal);
     
     if (modal) {
         modal.classList.add('active');
-        modal.style.display = 'flex';
+        modal.style.display = 'flex';  // ВАЖНО: принудительно!
+        modal.style.position = 'fixed';
+        modal.style.zIndex = '999999';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
         document.body.style.overflow = 'hidden';
         console.log('✅ Модальное окно открыто!');
     } else {
