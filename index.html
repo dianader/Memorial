@@ -1888,6 +1888,156 @@ body {
 #requisitesModal [style*="grid-column"] {
     grid-column: 1 / -1 !important;
 }
+     /* Модальное окно КОНЦЕПЦИИ */
+#conceptModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#conceptModal.active {
+    display: flex !important;
+}
+
+#conceptModal .modal-content {
+    background: linear-gradient(135deg, #1a1f2e 0%, #0a0e1a 100%);
+    border: 1px solid #c9a961;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Модальное окно ВИЗУАЛИЗАЦИИ */
+#visualizationModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#visualizationModal.active {
+    display: flex !important;
+}
+
+#visualizationModal .modal-content {
+    background: linear-gradient(135deg, #1a1f2e 0%, #0a0e1a 100%);
+    border: 1px solid #c9a961;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Общие стили для новых модалок */
+#conceptModal .modal-close,
+#visualizationModal .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #c9a961;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #c9a961;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+#conceptModal .modal-close:hover,
+#visualizationModal .modal-close:hover {
+    background: #c9a961;
+    color: #1a1f2e;
+}
+
+#conceptModal .modal-title,
+#visualizationModal .modal-title {
+    font-size: 22px;
+    color: #c9a961;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Список писем/материалов */
+#conceptModal .letters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#conceptModal .letter-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#conceptModal .letter-item:hover {
+    background: rgba(201, 169, 97, 0.1);
+    border-color: #c9a961;
+    transform: translateX(5px);
+}
+
+#conceptModal .letter-icon {
+    font-size: 24px;
+    min-width: 40px;
+    text-align: center;
+}
+
+#conceptModal .letter-info {
+    flex: 1;
+}
+
+#conceptModal .letter-name {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+#conceptModal .letter-size {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
 </style>
 </style>
 </head>
