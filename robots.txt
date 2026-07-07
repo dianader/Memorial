@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://memorial58.ru/sitemap.xml
