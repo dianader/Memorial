@@ -2431,7 +2431,7 @@ body {
         </div>
     </div>
 
-    <!-- 4. СХЕМА РАЗМЕЩЕНИЯ -->
+    <!-- 4. ОБОСНОВАНИЕ -->
     <div class="doc-card" onclick="openFile('Обоснование.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2446,7 +2446,7 @@ body {
         </div>
     </div>
 
-    <!-- 5. ПРЕЗЕНТАЦИЯ -->
+    <!-- 5. ОБРАЗОВАТЕЛЬНАЯ ПРОГРАММА -->
     <div class="doc-card" onclick="openFile('О.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2466,7 +2466,8 @@ body {
             <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
         </div>
     </div>
-              <!-- 7. СМЕТА ПРОЕКТА -->
+
+    <!-- 6. КОНЦЕПЦИЯ МОЛОДЁЖНОГО АКТИВА -->
     <div class="doc-card" onclick="openFile('Актив.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2486,7 +2487,7 @@ body {
         </div>
     </div>
 
-     <!-- 8. ГЕРОИ ПЕНЗЕНСКОЙ ЗЕМЛИ -->
+    <!-- 7. ГЕРОИ ПЕНЗЕНСКОЙ ЗЕМЛИ -->
     <div class="doc-card" onclick="openFile('Герои pdf.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2506,7 +2507,7 @@ body {
         </div>
     </div>
 
-    <!-- 9. СМИ О НАС -->
+    <!-- 8. СМИ О НАС -->
     <div class="doc-card" onclick="openMediaModal()">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2523,8 +2524,7 @@ body {
         </div>
     </div>
 
-   
- <!-- 6. РЕКВИЗИТЫ -->
+    <!-- 9. РЕКВИЗИТЫ -->
     <div class="doc-card" onclick="openRequisitesModal()">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2541,7 +2541,7 @@ body {
             <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
         </div>
     </div>
-</div>
+
     <!-- 10. СТАНЬТЕ ЧАСТЬЮ ДОБРОГО ДЕЛА -->
     <div class="doc-card" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.15) 0%, rgba(26, 31, 46, 0.95) 100%); border: 2px solid #c9a961;">
         <div class="doc-icon" style="margin-bottom: 10px;">
@@ -2564,7 +2564,8 @@ body {
             </div>
         </div>
     </div>
-</div>  <!-- Этот </div> закрывает docs-grid -->
+</div>
+            </div>
         </div>
         <div class="footer-note">
             <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
@@ -2593,21 +2594,21 @@ body {
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Правительство.pdf')">
-                <div class="letter-icon"></div>
+                <div class="letter-icon">📄</div>
                 <div class="letter-info">
                     <div class="letter-name">Письмо Правительства Пензенской области</div>
                     <div class="letter-size">PDF · 1.5 МБ</div>
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Федеральная служба.pdf')">
-                <div class="letter-icon"></div>
+                <div class="letter-icon">📄</div>
                 <div class="letter-info">
                     <div class="letter-name">Федеральная служба</div>
                     <div class="letter-size">PDF · 0.9 МБ</div>
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Письмо Администрации.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Письмо Администрации</div>
                     <div class="letter-size">PDF · 1.1 МБ</div>
@@ -2708,7 +2709,7 @@ body {
         <div class="modal-title">КОНЦЕПЦИЯ МЕМОРИАЛЬНОГО КОМПЛЕКСА</div>
         <div class="letters-list">
             <div class="letter-item" onclick="openFile('Концепция.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Концепция мемориального комплекса</div>
                     <div class="letter-size">PDF · 2.5 МБ</div>
@@ -2971,7 +2972,7 @@ body {
 
     // Открытие модального окна концепции
     function openConceptModal() {
-        console.log('🔵 Открытие концепции...');
+        console.log(' Открытие концепции...');
         const modal = document.getElementById('conceptModal');
         console.log(' Модальное окно:', modal);
         
