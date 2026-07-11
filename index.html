@@ -2553,6 +2553,22 @@ body {
                 </div>
                 <div>Вместе сохраним память о героях для будущих поколений</div>
             </div>
+                <!-- 9. СМИ О НАС -->
+    <div class="doc-card" onclick="openMediaModal()">
+        <div class="doc-icon">
+            <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="12" width="44" height="36" rx="2"/>
+                <circle cx="30" cy="26" r="6"/>
+                <path d="M22 38 L30 32 L38 38"/>
+                <path d="M18 44 L42 44"/>
+            </svg>
+        </div>
+        <div class="doc-title">СМИ<br>О НАС</div>
+        <div class="doc-meta">
+            <span class="doc-size">3 блока</span>
+            <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        </div>
+    </div>
         </div>
         <button class="side-btn" onclick="showPage('page3')">
             ВЕРНУТЬСЯ К ПОДДЕРЖКЕ ПРОЕКТА
@@ -2697,6 +2713,119 @@ body {
 </div>
 
 </section>
+    <!-- Модальное окно для СМИ О НАС -->
+<div class="modal" id="mediaModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 700px;">
+        <div class="modal-close" onclick="closeMediaModal()">×</div>
+        <div class="modal-title">СМИ О НАС</div>
+        
+        <!-- ССЫЛКИ -->
+        <div style="margin-bottom: 30px;">
+            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;">📰 Публикации в СМИ:</div>
+            <div class="letters-list">
+                <div class="letter-item" onclick="window.open('https://ссылка1.ru', '_blank')" style="cursor: pointer;">
+                    <div class="letter-icon">🔗</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Название первой публикации</div>
+                        <div class="letter-size" style="color: #267646;">Открыть ссылку →</div>
+                    </div>
+                </div>
+                <div class="letter-item" onclick="window.open('https://ссылка2.ru', '_blank')" style="cursor: pointer;">
+                    <div class="letter-icon"></div>
+                    <div class="letter-info">
+                        <div class="letter-name">Название второй публикации</div>
+                        <div class="letter-size" style="color: #267646;">Открыть ссылку →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ФОТОГАЛЕРЕИ -->
+        <div style="border-top: 1px solid rgba(201, 169, 97, 0.3); padding-top: 20px;">
+            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;">📸 Фотогалереи:</div>
+            <div class="letters-list">
+                <div class="letter-item" onclick="openMediaGallery1Modal()" style="cursor: pointer;">
+                    <div class="letter-icon">🖼️</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Название первой галереи</div>
+                        <div class="letter-size">3 фото</div>
+                    </div>
+                </div>
+                <div class="letter-item" onclick="openMediaGallery2Modal()" style="cursor: pointer;">
+                    <div class="letter-icon">🖼️</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Название второй галереи</div>
+                        <div class="letter-size">3 фото</div>
+                    </div>
+                </div>
+                <div class="letter-item" onclick="openMediaGallery3Modal()" style="cursor: pointer;">
+                    <div class="letter-icon">🖼️</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Название третьей галереи</div>
+                        <div class="letter-size">3 фото</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для галереи 1 -->
+<div class="modal" id="mediaGallery1Modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 900px;">
+        <div class="modal-close" onclick="closeMediaGallery1Modal()">×</div>
+        <div class="modal-title">Название первой галереи</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media1_1.jpg" alt="Фото 1" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media1_2.jpg" alt="Фото 2" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media1_3.jpg" alt="Фото 3" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для галереи 2 -->
+<div class="modal" id="mediaGallery2Modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 900px;">
+        <div class="modal-close" onclick="closeMediaGallery2Modal()">×</div>
+        <div class="modal-title">Название второй галереи</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media2_1.jpg" alt="Фото 1" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media2_2.jpg" alt="Фото 2" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media2_3.jpg" alt="Фото 3" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для галереи 3 -->
+<div class="modal" id="mediaGallery3Modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 900px;">
+        <div class="modal-close" onclick="closeMediaGallery3Modal()">×</div>
+        <div class="modal-title">Название третьей галереи</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media3_1.jpg" alt="Фото 1" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media3_2.jpg" alt="Фото 2" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/media3_3.jpg" alt="Фото 3" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ==================== МОДАЛЬНЫЕ ОКНА КОНЦЕПЦИИ И ВИЗУАЛИЗАЦИИ (ПОСЛЕ </section>) ==================== -->
 
@@ -2905,6 +3034,127 @@ body {
             modal.classList.remove('active');
             modal.style.display = 'none';
             document.body.style.overflow = '';
+        }
+    }
+    
+    // Открытие модального окна СМИ
+    function openMediaModal() {
+        const modal = document.getElementById('mediaModal');
+        if (modal) {
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие модального окна СМИ
+    function closeMediaModal() {
+        const modal = document.getElementById('mediaModal');
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Открытие галереи 1
+    function openMediaGallery1Modal() {
+        const modal = document.getElementById('mediaGallery1Modal');
+        if (modal) {
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие галереи 1
+    function closeMediaGallery1Modal() {
+        const modal = document.getElementById('mediaGallery1Modal');
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Открытие галереи 2
+    function openMediaGallery2Modal() {
+        const modal = document.getElementById('mediaGallery2Modal');
+        if (modal) {
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие галереи 2
+    function closeMediaGallery2Modal() {
+        const modal = document.getElementById('mediaGallery2Modal');
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Открытие галереи 3
+    function openMediaGallery3Modal() {
+        const modal = document.getElementById('mediaGallery3Modal');
+        if (modal) {
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие галереи 3
+    function closeMediaGallery3Modal() {
+        const modal = document.getElementById('mediaGallery3Modal');
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Закрытие модальных окон при клике вне их
+    window.onclick = function(event) {
+        const lettersModal = document.getElementById('lettersModal');
+        const requisitesModal = document.getElementById('requisitesModal');
+        const contactModal = document.getElementById('contactModal');
+        const conceptModal = document.getElementById('conceptModal');
+        const visualizationModal = document.getElementById('visualizationModal');
+        const mediaModal = document.getElementById('mediaModal');
+        const mediaGallery1Modal = document.getElementById('mediaGallery1Modal');
+        const mediaGallery2Modal = document.getElementById('mediaGallery2Modal');
+        const mediaGallery3Modal = document.getElementById('mediaGallery3Modal');
+        
+        if (event.target == lettersModal) {
+            closeLettersModal();
+        }
+        if (event.target == requisitesModal) {
+            closeRequisitesModal();
+        }
+        if (event.target == contactModal) {
+            closeContactModal();
+        }
+        if (event.target == conceptModal) {
+            closeConceptModal();
+        }
+        if (event.target == visualizationModal) {
+            closeVisualizationModal();
+        }
+        if (event.target == mediaModal) {
+            closeMediaModal();
+        }
+        if (event.target == mediaGallery1Modal) {
+            closeMediaGallery1Modal();
+        }
+        if (event.target == mediaGallery2Modal) {
+            closeMediaGallery2Modal();
+        }
+        if (event.target == mediaGallery3Modal) {
+            closeMediaGallery3Modal();
         }
     }
 
