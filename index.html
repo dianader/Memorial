@@ -2360,7 +2360,6 @@ body {
 </div>
 </div>
 </section>
-
 <!-- ==================== СТРАНИЦА 4 ==================== -->
 <section class="page" id="page4">
     <img src="img/4 итог.jpg" alt="Background" class="bg-image">
@@ -2552,8 +2551,40 @@ body {
         </div>
         <div class="doc-title">СТАНЬТЕ ЧАСТЬЮ<br>ДОБРОГО ДЕЛА</div>
         <div class="doc-meta">
-            <span class="doc-size">2 кнопки</span>
+            <span class="doc-size">Информация</span>
             <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        </div>
+    </div>
+
+    <!-- 11. ВЕРНУТЬСЯ К ПОДДЕРЖКЕ -->
+    <div class="doc-card" onclick="showPage('page3')" style="cursor: pointer;">
+        <div class="doc-icon">
+            <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <path d="M30 10 L30 50" stroke="#c9a961"/>
+                <path d="M30 10 L20 20 L30 10 L40 20" stroke="#c9a961"/>
+                <circle cx="30" cy="30" r="15" stroke="#c9a961"/>
+            </svg>
+        </div>
+        <div class="doc-title">ВЕРНУТЬСЯ К<br>ПОДДЕРЖКЕ ПРОЕКТА</div>
+        <div class="doc-meta">
+            <span class="doc-size">Перейти</span>
+            <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+    </div>
+
+    <!-- 12. КОНТАКТЫ ОРГАНИЗАТОРА -->
+    <div class="doc-card" onclick="openContactModal()" style="cursor: pointer;">
+        <div class="doc-icon">
+            <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <path d="M20 10 L40 10 L40 50 L20 50 Z" stroke="#c9a961"/>
+                <circle cx="30" cy="25" r="5" stroke="#c9a961"/>
+                <path d="M22 40 C22 35 26 32 30 32 C34 32 38 35 38 40" stroke="#c9a961"/>
+            </svg>
+        </div>
+        <div class="doc-title">КОНТАКТЫ<br>ОРГАНИЗАТОРА</div>
+        <div class="doc-meta">
+            <span class="doc-size">Связаться</span>
+            <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         </div>
     </div>
 </div>
@@ -2586,14 +2617,14 @@ body {
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Правительство.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Письмо Правительства Пензенской области</div>
                     <div class="letter-size">PDF · 1.5 МБ</div>
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Федеральная служба.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Федеральная служба</div>
                     <div class="letter-size">PDF · 0.9 МБ</div>
@@ -2621,7 +2652,7 @@ body {
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('УФСИН.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">УФСИН</div>
                     <div class="letter-size">PDF · 1.0 МБ</div>
@@ -2634,7 +2665,7 @@ body {
                     <div class="letter-size">PDF · 1.0 МБ</div>
                 </div>
             </div>
-                        <div class="letter-item" onclick="openFile('управление образования.pdf')">
+            <div class="letter-item" onclick="openFile('управление образования.pdf')">
                 <div class="letter-icon">📄</div>
                 <div class="letter-info">
                     <div class="letter-name">Управление образования</div>
@@ -2761,7 +2792,7 @@ body {
                     </div>
                 </div>
                 <div class="letter-item" onclick="window.open('https://ссылка2.ru', '_blank')" style="cursor: pointer;">
-                    <div class="letter-icon">🔗</div>
+                    <div class="letter-icon"></div>
                     <div class="letter-info">
                         <div class="letter-name">Название второй публикации</div>
                         <div class="letter-size" style="color: #267646;">Открыть ссылку →</div>
@@ -2789,7 +2820,7 @@ body {
                     </div>
                 </div>
                 <div class="letter-item" onclick="openMediaGallery3Modal()" style="cursor: pointer;">
-                    <div class="letter-icon">️</div>
+                    <div class="letter-icon">🖼️</div>
                     <div class="letter-info">
                         <div class="letter-name">Название третьей галереи</div>
                         <div class="letter-size">3 фото</div>
@@ -2884,16 +2915,6 @@ body {
                         <div class="letter-name">Вместе сохраним память о героях для будущих поколений</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <button class="side-btn" onclick="showPage('page3'); closeSupportModal();" style="width: 100%; padding: 15px; font-size: 14px;">
-                ВЕРНУТЬСЯ К ПОДДЕРЖКЕ ПРОЕКТА
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <div class="contact-btn" onclick="openContactModal(); closeSupportModal();" style="width: 100%; padding: 15px; font-size: 14px; text-align: center; cursor: pointer;">
-                 КОНТАКТЫ ОРГАНИЗАТОРА
             </div>
         </div>
     </div>
