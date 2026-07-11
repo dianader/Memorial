@@ -2816,23 +2816,45 @@ body {
     </div>
 </div>
 
-<!-- Модальное окно для галереи 1 -->
+<!-- Модальное окно для галереи 1 (НОВОСТИ О НАС) -->
 <div class="modal" id="mediaGallery1Modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
-    <div class="modal-content" style="max-width: 900px;">
+    <div class="modal-content" style="max-width: 700px;">
         <div class="modal-close" onclick="closeMediaGallery1Modal()">×</div>
-        <div class="modal-title">О НАС</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/ПЕРВЫЙ ПЕНЗЕНСКИЙjpg" alt="Первый Пензенский" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="modal-title">НОВОСТИ О НАС</div>
+        
+        <!-- Фото 1 -->
+        <div class="letter-item" onclick="openImageModal('img/ПЕРВЫЙ ПЕНЗЕНСКИЙ.jpg')" style="cursor: pointer; margin-bottom: 15px;">
+            <div class="letter-icon">📸</div>
+            <div class="letter-info">
+                <div class="letter-name">Первый Пензенский</div>
+                <div class="letter-size">Нажмите для просмотра</div>
             </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/РИА НОВОСТИ.jpg" alt="РИА новости  style="width: 100%; height: 200px; object-fit: cover;">
+        </div>
+        
+        <!-- Фото 2 -->
+        <div class="letter-item" onclick="openImageModal('img/РИА НОВОСТИ.jpg')" style="cursor: pointer; margin-bottom: 15px;">
+            <div class="letter-icon">📸</div>
+            <div class="letter-info">
+                <div class="letter-name">РИА Новости</div>
+                <div class="letter-size">Нажмите для просмотра</div>
             </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/Вадинские вести.jpg" alt="Вадинские вести" style="width: 100%; height: 200px; object-fit: cover;">
+        </div>
+        
+        <!-- Фото 3 -->
+        <div class="letter-item" onclick="openImageModal('img/Вадинские вести.jpg')" style="cursor: pointer; margin-bottom: 15px;">
+            <div class="letter-icon">📸</div>
+            <div class="letter-info">
+                <div class="letter-name">Вадинские вести</div>
+                <div class="letter-size">Нажмите для просмотра</div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Модальное окно для просмотра фото -->
+<div class="modal" id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+    <div class="modal-close" onclick="closeImageModal()" style="z-index: 1000001;">×</div>
+    <img id="fullImage" src="" alt="Полное фото" style="max-width: 100%; max-height: 90vh; object-fit: contain; border-radius: 8px;">
 </div>
 
 
@@ -3128,7 +3150,27 @@ body {
             document.body.style.overflow = '';
         }
     }
+    // Открытие фото в полном размере
+    function openImageModal(imageSrc) {
+        const modal = document.getElementById('imageModal');
+        const img = document.getElementById('fullImage');
+        if (modal && img) {
+            img.src = imageSrc;
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
 
+    // Закрытие фото
+    function closeImageModal() {
+        const modal = document.getElementById('imageModal');
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
     // Закрытие модальных окон при клике вне их
     window.onclick = function(event) {
         const lettersModal = document.getElementById('lettersModal');
@@ -3172,7 +3214,11 @@ body {
         if (event.target == supportModal) {
             closeSupportModal();
         }
+                if (event.target == document.getElementById('imageModal')) {
+            closeImageModal();
+        }
     }
+    
 
     // Принудительное исправление 4 страницы на мобильных
     document.addEventListener('DOMContentLoaded', function() {
