@@ -2053,26 +2053,7 @@ body {
     height: 200px;
     object-fit: cover;
 }
-     /* Уменьшаем карточки документов */
-.docs-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
-    gap: 12px !important;
-}
-
-.doc-card {
-    min-height: 180px !important;
-    padding: 15px !important;
-}
-
-.doc-title {
-    font-size: 11px !important;
-    line-height: 1.3 !important;
-}
-
-.doc-icon svg {
-    width: 35px !important;
-    height: 35px !important;
-}
+   
 </style>
 </head>
 <body>
@@ -2563,25 +2544,16 @@ body {
     </div>
 
     <!-- 10. СТАНЬТЕ ЧАСТЬЮ ДОБРОГО ДЕЛА -->
-    <div class="doc-card" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.15) 0%, rgba(26, 31, 46, 0.95) 100%); border: 2px solid #c9a961;">
-        <div class="doc-icon" style="margin-bottom: 10px;">
+    <div class="doc-card" onclick="openSupportModal()">
+        <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
                 <path d="M30 8 L32 20 L44 20 L34 28 L38 40 L30 32 L22 40 L26 28 L16 20 L28 20 Z" stroke="#c9a961" fill="#c9a961"/>
             </svg>
         </div>
-        <div class="doc-title" style="font-size: 11px; margin-bottom: 15px;">СТАНЬТЕ ЧАСТЬЮ<br>ДОБРОГО ДЕЛА</div>
-        <div style="font-size: 10px; color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 15px; text-align: center;">
-            <div style="margin-bottom: 8px;">⭐ Поддержите проект финансово</div>
-            <div style="margin-bottom: 8px;">⭐ Расскажите друзьям и коллегам</div>
-            <div>⭐ Сохраним память о героях</div>
-        </div>
-        <div class="doc-meta" style="margin-top: auto;">
-            <button class="side-btn" onclick="showPage('page3')" style="width: 100%; padding: 10px; font-size: 11px; margin-bottom: 8px;">
-                ВЕРНУТЬСЯ К ПОДДЕРЖКЕ
-            </button>
-            <div class="contact-btn" onclick="openContactModal()" style="width: 100%; padding: 10px; font-size: 11px; cursor: pointer;">
-                 КОНТАКТЫ ОРГАНИЗАТОРА
-            </div>
+        <div class="doc-title">СТАНЬТЕ ЧАСТЬЮ<br>ДОБРОГО ДЕЛА</div>
+        <div class="doc-meta">
+            <span class="doc-size">2 кнопки</span>
+            <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
         </div>
     </div>
 </div>
@@ -2628,21 +2600,21 @@ body {
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Письмо Администрации.pdf')">
-                <div class="letter-icon"></div>
+                <div class="letter-icon">📄</div>
                 <div class="letter-info">
                     <div class="letter-name">Письмо Администрации</div>
                     <div class="letter-size">PDF · 1.1 МБ</div>
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('БФ.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Благотворительный фонд «Альфа»</div>
                     <div class="letter-size">PDF · 1.0 МБ</div>
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Собрание.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Законодательное собрание Пензенской области</div>
                     <div class="letter-size">PDF · 1.0 МБ</div>
@@ -2729,7 +2701,7 @@ body {
         <div class="modal-title">КОНЦЕПЦИЯ МЕМОРИАЛЬНОГО КОМПЛЕКСА</div>
         <div class="letters-list">
             <div class="letter-item" onclick="openFile('Концепция.pdf')">
-                <div class="letter-icon"></div>
+                <div class="letter-icon">📄</div>
                 <div class="letter-info">
                     <div class="letter-name">Концепция мемориального комплекса</div>
                     <div class="letter-size">PDF · 2.5 МБ</div>
@@ -2779,17 +2751,17 @@ body {
         
         <!-- ССЫЛКИ -->
         <div style="margin-bottom: 30px;">
-            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;"> Публикации в СМИ:</div>
+            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;">📰 Публикации в СМИ:</div>
             <div class="letters-list">
                 <div class="letter-item" onclick="window.open('https://ссылка1.ru', '_blank')" style="cursor: pointer;">
-                    <div class="letter-icon"></div>
+                    <div class="letter-icon">🔗</div>
                     <div class="letter-info">
                         <div class="letter-name">Название первой публикации</div>
                         <div class="letter-size" style="color: #267646;">Открыть ссылку →</div>
                     </div>
                 </div>
                 <div class="letter-item" onclick="window.open('https://ссылка2.ru', '_blank')" style="cursor: pointer;">
-                    <div class="letter-icon"></div>
+                    <div class="letter-icon">🔗</div>
                     <div class="letter-info">
                         <div class="letter-name">Название второй публикации</div>
                         <div class="letter-size" style="color: #267646;">Открыть ссылку →</div>
@@ -2880,6 +2852,48 @@ body {
             </div>
             <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
                 <img src="img/media3_3.jpg" alt="Фото 3" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для ПОДДЕРЖКИ -->
+<div class="modal" id="supportModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 600px;">
+        <div class="modal-close" onclick="closeSupportModal()">×</div>
+        <div class="modal-title">СТАНЬТЕ ЧАСТЬЮ ДОБРОГО ДЕЛА</div>
+        
+        <div style="margin-bottom: 25px;">
+            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;">Как помочь:</div>
+            <div class="letters-list">
+                <div class="letter-item">
+                    <div class="letter-icon">⭐</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Поддержите проект финансово или информационно</div>
+                    </div>
+                </div>
+                <div class="letter-item">
+                    <div class="letter-icon">⭐</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Расскажите о проекте друзьям и коллегам</div>
+                    </div>
+                </div>
+                <div class="letter-item">
+                    <div class="letter-icon">⭐</div>
+                    <div class="letter-info">
+                        <div class="letter-name">Вместе сохраним память о героях для будущих поколений</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <button class="side-btn" onclick="showPage('page3'); closeSupportModal();" style="width: 100%; padding: 15px; font-size: 14px;">
+                ВЕРНУТЬСЯ К ПОДДЕРЖКЕ ПРОЕКТА
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="contact-btn" onclick="openContactModal(); closeSupportModal();" style="width: 100%; padding: 15px; font-size: 14px; text-align: center; cursor: pointer;">
+                 КОНТАКТЫ ОРГАНИЗАТОРА
             </div>
         </div>
     </div>
@@ -2992,9 +3006,9 @@ body {
 
     // Открытие модального окна концепции
     function openConceptModal() {
-        console.log(' Открытие концепции...');
+        console.log('🔵 Открытие концепции...');
         const modal = document.getElementById('conceptModal');
-        console.log(' Модальное окно:', modal);
+        console.log('🔵 Модальное окно:', modal);
         
         if (modal) {
             modal.classList.add('active');
@@ -3122,6 +3136,26 @@ body {
         }
     }
 
+    // Открытие модального окна поддержки
+    function openSupportModal() {
+        const modal = document.getElementById('supportModal');
+        if (modal) {
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Закрытие модального окна поддержки
+    function closeSupportModal() {
+        const modal = document.getElementById('supportModal');
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+
     // Закрытие модальных окон при клике вне их
     window.onclick = function(event) {
         const lettersModal = document.getElementById('lettersModal');
@@ -3133,6 +3167,7 @@ body {
         const mediaGallery1Modal = document.getElementById('mediaGallery1Modal');
         const mediaGallery2Modal = document.getElementById('mediaGallery2Modal');
         const mediaGallery3Modal = document.getElementById('mediaGallery3Modal');
+        const supportModal = document.getElementById('supportModal');
         
         if (event.target == lettersModal) {
             closeLettersModal();
@@ -3160,6 +3195,9 @@ body {
         }
         if (event.target == mediaGallery3Modal) {
             closeMediaGallery3Modal();
+        }
+        if (event.target == supportModal) {
+            closeSupportModal();
         }
     }
 
