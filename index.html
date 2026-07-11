@@ -2053,6 +2053,26 @@ body {
     height: 200px;
     object-fit: cover;
 }
+     /* Уменьшаем карточки документов */
+.docs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.doc-card {
+    min-height: 180px !important;
+    padding: 15px !important;
+}
+
+.doc-title {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+}
+
+.doc-icon svg {
+    width: 35px !important;
+    height: 35px !important;
+}
 </style>
 </head>
 <body>
