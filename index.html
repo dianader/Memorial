@@ -2378,7 +2378,6 @@ body {
             </div>
         </div>
       <div class="docs-grid">
-         <div class="docs-grid">
     <!-- 1. ПАСПОРТ ПРОЕКТА -->
     <div class="doc-card" onclick="openFile('Паспорт проекта.pdf')">
         <div class="doc-icon">
@@ -2397,7 +2396,7 @@ body {
         </div>
     </div>
 
-    <!-- 2. КОНЦЕПЦИЯ -->
+       <!-- 2. КОНЦЕПЦИЯ -->
     <div class="doc-card" onclick="openConceptModal()">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2432,7 +2431,7 @@ body {
         </div>
     </div>
 
-    <!-- 4. ОБОСНОВАНИЕ -->
+    <!-- 4. СХЕМА РАЗМЕЩЕНИЯ -->
     <div class="doc-card" onclick="openFile('Обоснование.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2447,7 +2446,7 @@ body {
         </div>
     </div>
 
-    <!-- 5. ОБРАЗОВАТЕЛЬНАЯ ПРОГРАММА -->
+    <!-- 5. ПРЕЗЕНТАЦИЯ -->
     <div class="doc-card" onclick="openFile('О.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2467,8 +2466,7 @@ body {
             <div class="doc-download"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
         </div>
     </div>
-
-    <!-- 6. КОНЦЕПЦИЯ МОЛОДЁЖНОГО АКТИВА -->
+              <!-- 7. СМЕТА ПРОЕКТА -->
     <div class="doc-card" onclick="openFile('Актив.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2488,7 +2486,7 @@ body {
         </div>
     </div>
 
-    <!-- 7. ГЕРОИ ПЕНЗЕНСКОЙ ЗЕМЛИ -->
+     <!-- 8. ГЕРОИ ПЕНЗЕНСКОЙ ЗЕМЛИ -->
     <div class="doc-card" onclick="openFile('Герои pdf.pdf')">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2508,7 +2506,7 @@ body {
         </div>
     </div>
 
-    <!-- 8. СМИ О НАС -->
+    <!-- 9. СМИ О НАС -->
     <div class="doc-card" onclick="openMediaModal()">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2525,7 +2523,8 @@ body {
         </div>
     </div>
 
-    <!-- 9. РЕКВИЗИТЫ -->
+   
+ <!-- 6. РЕКВИЗИТЫ -->
     <div class="doc-card" onclick="openRequisitesModal()">
         <div class="doc-icon">
             <svg viewBox="0 0 60 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2571,8 +2570,6 @@ body {
                 </div>
                 <div>Вместе сохраним память о героях для будущих поколений</div>
             </div>
-              
-    
         </div>
         <button class="side-btn" onclick="showPage('page3')">
             ВЕРНУТЬСЯ К ПОДДЕРЖКЕ ПРОЕКТА
@@ -2612,14 +2609,14 @@ body {
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Правительство.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Письмо Правительства Пензенской области</div>
                     <div class="letter-size">PDF · 1.5 МБ</div>
                 </div>
             </div>
             <div class="letter-item" onclick="openFile('Федеральная служба.pdf')">
-                <div class="letter-icon">📄</div>
+                <div class="letter-icon"></div>
                 <div class="letter-info">
                     <div class="letter-name">Федеральная служба</div>
                     <div class="letter-size">PDF · 0.9 МБ</div>
@@ -2717,7 +2714,59 @@ body {
 </div>
 
 </section>
-    <!-- Модальное окно для СМИ О НАС -->
+
+<!-- ==================== МОДАЛЬНЫЕ ОКНА ==================== -->
+
+<!-- Модальное окно для КОНЦЕПЦИИ -->
+<div class="modal" id="conceptModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 650px;">
+        <div class="modal-close" onclick="closeConceptModal()">×</div>
+        <div class="modal-title">КОНЦЕПЦИЯ МЕМОРИАЛЬНОГО КОМПЛЕКСА</div>
+        <div class="letters-list">
+            <div class="letter-item" onclick="openFile('Концепция.pdf')">
+                <div class="letter-icon">📄</div>
+                <div class="letter-info">
+                    <div class="letter-name">Концепция мемориального комплекса</div>
+                    <div class="letter-size">PDF · 2.5 МБ</div>
+                </div>
+            </div>
+            <div class="letter-item" onclick="openVisualizationModal()">
+                <div class="letter-icon">🖼️</div>
+                <div class="letter-info">
+                    <div class="letter-name">Визуализация мемориального комплекса</div>
+                    <div class="letter-size">5 фото · JPG</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для ВИЗУАЛИЗАЦИИ -->
+<div class="modal" id="visualizationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+    <div class="modal-content" style="max-width: 900px;">
+        <div class="modal-close" onclick="closeVisualizationModal()">×</div>
+        <div class="modal-title">ВИЗУАЛИЗАЦИЯ ПРОЕКТА</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/Визуализация.jpg" alt="Визуализация 1" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/4 итог.jpg" alt="Визуализация 2" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/глав.jpg" alt="Визуализация 3" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/22.jpg" alt="Визуализация 4" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+                <img src="img/3 итог.jpg" alt="Визуализация 5" style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для СМИ О НАС -->
 <div class="modal" id="mediaModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
     <div class="modal-content" style="max-width: 700px;">
         <div class="modal-close" onclick="closeMediaModal()">×</div>
@@ -2725,10 +2774,10 @@ body {
         
         <!-- ССЫЛКИ -->
         <div style="margin-bottom: 30px;">
-            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;">📰 Публикации в СМИ:</div>
+            <div style="font-size: 16px; color: #c9a961; margin-bottom: 15px; font-weight: 600;"> Публикации в СМИ:</div>
             <div class="letters-list">
                 <div class="letter-item" onclick="window.open('https://ссылка1.ru', '_blank')" style="cursor: pointer;">
-                    <div class="letter-icon">🔗</div>
+                    <div class="letter-icon"></div>
                     <div class="letter-info">
                         <div class="letter-name">Название первой публикации</div>
                         <div class="letter-size" style="color: #267646;">Открыть ссылку →</div>
@@ -2763,7 +2812,7 @@ body {
                     </div>
                 </div>
                 <div class="letter-item" onclick="openMediaGallery3Modal()" style="cursor: pointer;">
-                    <div class="letter-icon">🖼️</div>
+                    <div class="letter-icon">️</div>
                     <div class="letter-info">
                         <div class="letter-name">Название третьей галереи</div>
                         <div class="letter-size">3 фото</div>
@@ -2830,59 +2879,6 @@ body {
         </div>
     </div>
 </div>
-
-<!-- ==================== МОДАЛЬНЫЕ ОКНА КОНЦЕПЦИИ И ВИЗУАЛИЗАЦИИ (ПОСЛЕ </section>) ==================== -->
-
-<!-- Модальное окно для КОНЦЕПЦИИ -->
-<div class="modal" id="conceptModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
-    <div class="modal-content" style="max-width: 650px;">
-        <div class="modal-close" onclick="closeConceptModal()">×</div>
-        <div class="modal-title">КОНЦЕПЦИЯ МЕМОРИАЛЬНОГО КОМПЛЕКСА</div>
-        <div class="letters-list">
-            <div class="letter-item" onclick="openFile('Концепция.pdf')">
-                <div class="letter-icon">📄</div>
-                <div class="letter-info">
-                    <div class="letter-name">Концепция мемориального комплекса</div>
-                    <div class="letter-size">PDF · 2.5 МБ</div>
-                </div>
-            </div>
-            <div class="letter-item" onclick="openVisualizationModal()">
-                <div class="letter-icon">🖼️</div>
-                <div class="letter-info">
-                    <div class="letter-name">Визуализация мемориального комплекса</div>
-                    <div class="letter-size">5 фото · JPG</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Модальное окно для ВИЗУАЛИЗАЦИИ -->
-<div class="modal" id="visualizationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; overflow-y: auto;">
-    <div class="modal-content" style="max-width: 900px;">
-        <div class="modal-close" onclick="closeVisualizationModal()">×</div>
-        <div class="modal-title">ВИЗУАЛИЗАЦИЯ ПРОЕКТА</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/Визуализация.jpg" alt="Визуализация 1" style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/4 итог.jpg" alt="Визуализация 2" style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/глав.jpg" alt="Визуализация 3" style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/22.jpg" alt="Визуализация 4" style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
-                <img src="img/3 итог.jpg" alt="Визуализация 5" style="width: 100%; height: 200px; object-fit: cover;">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ==================== ОСТАЛЬНЫЕ МОДАЛЬНЫЕ ОКНА (КОНТАКТЫ) ==================== -->
 
 <!-- Modal для контактов -->
 <div class="modal" id="contactModal">
@@ -2993,7 +2989,7 @@ body {
     function openConceptModal() {
         console.log('🔵 Открытие концепции...');
         const modal = document.getElementById('conceptModal');
-        console.log('🔵 Модальное окно:', modal);
+        console.log(' Модальное окно:', modal);
         
         if (modal) {
             modal.classList.add('active');
@@ -3040,7 +3036,7 @@ body {
             document.body.style.overflow = '';
         }
     }
-    
+
     // Открытие модального окна СМИ
     function openMediaModal() {
         const modal = document.getElementById('mediaModal');
@@ -3159,31 +3155,6 @@ body {
         }
         if (event.target == mediaGallery3Modal) {
             closeMediaGallery3Modal();
-        }
-    }
-
-    // Закрытие модальных окон при клике вне их
-    window.onclick = function(event) {
-        const lettersModal = document.getElementById('lettersModal');
-        const requisitesModal = document.getElementById('requisitesModal');
-        const contactModal = document.getElementById('contactModal');
-        const conceptModal = document.getElementById('conceptModal');
-        const visualizationModal = document.getElementById('visualizationModal');
-        
-        if (event.target == lettersModal) {
-            closeLettersModal();
-        }
-        if (event.target == requisitesModal) {
-            closeRequisitesModal();
-        }
-        if (event.target == contactModal) {
-            closeContactModal();
-        }
-        if (event.target == conceptModal) {
-            closeConceptModal();
-        }
-        if (event.target == visualizationModal) {
-            closeVisualizationModal();
         }
     }
 
